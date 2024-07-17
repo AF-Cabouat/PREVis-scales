@@ -17,22 +17,23 @@ The folders are organized following phases of the instrument development and val
 - ```/ Main paper figures```: figures from the main paper in PDF format.
 - ```/ Using PREVis - plotting results notebook and examples```: a folder containing example figures that researchers can plot to help analyze or present PREVis data. The folder also contains a Jupyter notebook named ```plotting_PREVis.ipynb``` and two example ```.csv``` datasets to plot all PDF figures in the folder.
 
-## CC-BY licence
-Material in this OSF repository is shared under the [CC-BY licence](https://creativecommons.org/licenses/by/4.0/). To use it, please cite the following source:
-
-> A.-F. Cabouat, T. He, T. Isenberg, P. Isenberg. 2024. "PREVis: Perceived Readability Evaluation for Visualizations". (Under review)
-
 ## Companion OSF repositories
 
-There are two other OSF repositories for this project:
+There are three OSF repositories for this project:
 
-- Studies pre-registrations on [osf.io/q4sdm](https://osf.io/q4sdm/?view_only=0ac76a186dfd47d298de145bad7cc861)
-- Additional documents in [osf.io/aewuq](https://osf.io/aewuq/?view_only=1306e44a240541408ced0f5b547725f5): Full Research log and Methodology notes for cognitive interviews (pre-test in section 5 of the main paper). We separated these files because they contain embedded images that we cannot share under the CC BY licence.
+- Original supplemental material on [osf.io/9cg8j](https://osf.io/9cg8j/)
+- Studies pre-registrations on [osf.io/q4sdm](https://osf.io/q4sdm/)
+- Additional documents in [osf.io/aewuq](https://osf.io/aewuq/): Full Research log and Methodology notes for cognitive interviews (pre-test in section 5 of the main paper). We separated these files because they contain embedded images that we cannot share under the CC BY licence.
 
+
+## CC-BY licence
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
+To use it, please cite the following source:
+
+> A.-F. Cabouat, T. He, T. Isenberg, P. Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. _IEEE Transactions on Visualization and Computer Graphics_, 2024. (Accepted).
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
