@@ -1,0 +1,413 @@
+"Somewhat relevant:
+59","To keep:
+34",DOI,Title,Year,Term found from search script,Type of visualization in the study,Type of likert scale used in study,Likert terms found,Likert term context (how researchers refer to the items in the publication),Terms to keep for our scale,whole questionnaire (if available)
+True,True,https://dx.doi.org/10.1109/TVCG.2010.194,SparkClouds: Visualizing Trends in Tag Clouds,2010,readab; legib; likert; ,trends,"1 to 7 (1 = Strongly Disagree, 7 = Strongly Agree)
+
+1 to 4 overall preference ranking (1 = most preferred visualization, 4 = least preferred visualization)",readability (visualization); like (interface); ease of use (visualization); effectiveness (visualization for task); visually cluttered (visualization),"Participants rated each of the four visualizations across eight satisfaction criteria including ease of learning, ease of use, effectiveness for use in performing the task, and appearance (liking the interface).
+
+ease of use, readability of the topic terms, liking the interface, learnability, efficiency of use, comparing topics within a month, comparing topics between months; the question regarding overall appearance (“The visualization looked cluttered.”)
+
+A final question that asked participants to provide an overall preference ranking (1=most preferred visualization, 4=least preferred visualization)",readability; ease of use; visually cluttered,
+True,True,https://dx.doi.org/10.1109/TVCG.2011.186,"Design Study of LineSets, a Novel Set Visualization Technique",2011,readab; likert; ,node-links; maps,"Study 1: readability evaluation
+1 to 5
+
+Study 2: global evaluation
+pairwise preference (Left, Right, No Preference)","confidence (user); effectiveness (visualization); frustration (user); ease (? visualization); clutter (visualization); enjoyment (user);
+
+simplicity; aesthetics; ease to follow","Study 1: evaluating readability (participants recruited among researchers)
+We asked 12 users to answer readability questions for both representations for varying data set complexity and size in two contexts (map and social network). (...)Subjective user ratings from the readability study satisfaction scores on multiple criteria: preference, confidence, accuracy, and frustration, using a Likert scale from 1 to 5.
+
+Study 2: evaluating paths preferences (participants not specified)
+We told them the decision criteria were “simplicity”, “aesthetics” and what felt easy to follow",confidence; effectiveness; frustration; ease; clutter; enjoyment; simplicity; ease to follow,
+True,True,https://dx.doi.org/10.1109/TVCG.2011.193,"Evaluation of Traditional, Orthogonal, and Radial Tree Diagrams by an Eye Tracking Study",2011,readab; likert; ,node-links,1 to 5,motivating; intuitive; suitable; helpful,"fill out which tree layout they found most motivating, most intuitive, and most suitable to perform the given task.",intuitive;,
+True,True,https://dx.doi.org/10.1109/TVCG.2011.183,Context-Preserving Visual Links,2011,readab; legib; likert;,paths;,1 to 7,find quickly (user); I did not miss any (user); mentally demanding (task); clearly visible (information in visualization); visual clutter (visualization); visually pleasing (visualization); beneficial for my work (visualization),"After each condition, the users were required to assess their subjective satisfaction with the highlighting technique on a questionnaire containing seven questions.
+
+subjective speed: find very quickly;
+subjective correctness: I did not miss any element;
+mental demand: was very mentally demanding;
+background visibility: information was clearly visible;
+clutter: amount of visual clutter;
+visual attractiveness: visually pleasing;
+usefulness: would be beneficial for my work",clearly visible; visual clutter,"subjective speed: I could find highlighted elements very quickly
+subjective correctness: I am sure I did not miss any highlighted element
+mental demand: The task was very mentally demanding
+background visibility: The background (non-highlighted) information was clearly visible
+amount of visual clutter: The highlighting technique introduced a high amount of visual clutter
+visual attractiveness: The highlighting technique was visually pleasing
+usefulness: The highlighting technique would be beneficial for my every day computer work
++ overall preference scores"
+True,True,https://dx.doi.org/10.1109/TVCG.2012.255,RelEx: Visualization for Actively Changing Overlay Network Specifications,2012,readab; likert;,matrix; node-links;,1 to 5 (best to worst),mean similarity; clear arrangement,"We did gather quantitative subjective ratings using a questionnaire about tool use for a set of four representative and open tasks, where the suitability of the tools for each task was rated using 5-point Likert scales.",clear arrangement;,
+True,True,https://dx.doi.org/10.1109/TVCG.2012.225,"Exploring Flow, Factors, and Outcomes of Temporal Event Sequences with the Outflow Visualization",2012,legib; likert;,flows; paths,"1 to 7 (1 = very easy, 7 = very hard)",learn (system); interpret (visualization feature); understand (information from visualization); find (information in visualization),"At the end of their study session, participants completed a questionnaire. It contained eight questions (Q1–Q8) The questionnaire also included free response questions to gather more subjective feedback.
+
+!!! in the questionnairem the words ""state"" and ""transitions"" refer to visual features of the visualization",easy / hard to interpret; easy / hard to understand;,"Q1. Is it easy or hard to learn how to use?
+Q2. Is it easy or hard to interpret proportion of states?
+Q3. Is it easy or hard to interpret proportion of transitions?
+Q4. Is it easy or hard to interpret transition time?
+Q5. Is it easy or hard to interpret outcome of states?
+Q6. Is it easy or hard to interpret outcome of transitions?
+Q7. Is it easy or hard to understand factors correlated with transitions?
+Q8. Is it easy or hard to find a particular state in the graph?"
+True,True,https://dx.doi.org/10.1109/TVCG.2012.189,A User Study on Curved Edges in Graph Visualization,2012,readab; likert; ,node-links;,1 to 5,effectiveness (visualization feature); prefered look (visualization feature),"In this paper we present two experiments studying the impact of edge curvature on graph readability.
+
+They were asked which edge type they preferred aesthetically and which they felt was most effective 
+for the tasks. (...) user preference on effectiveness and look of edge type
+(...) Figure 9(e) shows the aesthetics preference data and the y-axis is the number of participants that selected that edge type as the preferred one.",effectiveness; prefered look,
+True,True,https://dx.doi.org/10.1109/TVCG.2013.151,Edge Compression Techniques for Visualization of Dense Directed Graphs,2013,readab; likert;,node-links;,5 points,easy to learn (to read the visualization); confident (user); low clutter (visualization),"We experimentally tested whether people with little graph expertise can learn to read such representations depending on the type and degree 
+of edge compression. To our knowledge, we report the first empirical studies involving human participants on the readability of these techniques.",easy to learn to read; confident; low clutter,
+True,True,https://dx.doi.org/10.1109/TVCG.2013.180,Noise-Based Volume Rendering for the Visualization of Multivariate Volumetric Data,2013,readab; likert;,location; color;,5 points bipolar (-2 to +2) agreeing or disagreeing,easy overview; easy to understand; easy to interpret; confident,overview; understanding; interpretation; confidence,easy to gain a good overview of data; easy to understand displayed information; easy to interpret data values (in visualization); confidence in correct answers,"• Overview - It was easy to gain a good overview of the data.
+• Understanding - It was easy to understand the information displayed with this method.
+• Interpretation - It was easy to interpret the data values within the boxes.
+• Confidence - I am confident that my answers were correct when using this method."
+True,True,https://dx.doi.org/10.1109/TVCG.2014.2346983,"The relation between visualization size, grouping, and user performance",2014,readab; legib; likert;,,"1 to 7 (1 = very easy, 4 = neutral, 7 = very difficult)",easy / difficult (visualization),"default parameters provided by visualization software can lead to hard-to-read or misleading visualizations (...)
+A central goal of this paper is to understand how to improve visualization tools that are used for rapid serial viewing, in which search speed is especially important.
+
+We evaluated how accurately participants could gauge visualization difficulty by correlating each participant’s mean response time for the 75 grid types with their ratings of perceived difficulty",easy / difficult,
+True,True,https://dx.doi.org/10.1109/TVCG.2015.2467035,SchemeLens: A Content-Aware Vector-Based Fisheye Technique for Navigating Large Systems Diagrams,2015,readab; legib; likert;,diagrams;,"1 to 5 (1 = Totally Disagree, 5 = Totally Agree)",like; intuitive; sickness / fatigue; easy to read (text); easy to read (symbols); easy to see (link); good overview (mind); easy (navigation); lost,"Subjective preferences per technique
+Readability = easy to read + easy to see",easy to read text; easy to read symbols; easy to see link between components; good overview of diagram in mind,"I liked the technique
+I think the technique is intuitive
+I felt sickness or fatigue
+The text was easy to read
+Symbols were easy to read
+It was easy to see the link between two closed components
+It was easy to see the link between two distant components
+I had a good overview of the whole diagram in my mind
+The navigation was easy
+I flet lost sometimes"
+True,True,https://dx.doi.org/10.1109/TVCG.2015.2467872,Orientation-Enhanced Parallel Coordinate Plots,2015,readab; likert; ,parallel plots;,5 points,"easy (use); easy (understand); useful; suitable (identification for patterns, outliers, noise-obstructed data structures)","(The technique) enables discerning individual trends and patterns, while it may even reveal patterns that are potentially obscured in traditional PCPs.
+
+Grade 2 techniques and 5 brushing methods", easy to understand;,
+True,True,https://dx.doi.org/10.1109/MCG.2016.100,Using Gap Charts to Visualize the Temporal Evolution of Ranks and Scores,2016,legib; likert; ,line charts;,"Exp#1 (preference order)
+1 to 3 Likert-like scales, with the possibility of giving equal preferences.
+
+Exp#2
+1 to 5 (1 = very easy, 3 = neutral, 5 = very difficult)
+1 to 5 (1 = not confident at all, 3 = neutral, 5 = very confident)
+1 to 5 (1 = not suitable at all, 3 = neutral, 5 = very suitable)","Exp#1: preference (legibility); preference (aesthetic)
+
+Exp#2: difficulty (task); confidence (response); suitability (chart)","Exp#1 (preference order):
+- appealing (aesthetics)
+- legibility: we instructed participants to focus on how easy or difficult each rendering variation made it to identify (+ informations)
+
+Exp#2
+participants were asked to evaluate the difficulty of the task, their confidence in their responses, and the suitability of the class of charts for the task",easy / difficult to identify,
+True,True,https://dx.doi.org/10.1109/TVCG.2016.2642109,Evaluating Cartogram Effectiveness,2016,readab; likert;,cartograms;,"Initial rating
+1 to 5 (1 = very poor, 2 = poor, 3 = average, 4 = good, 5 = excellent)
+
+Post exp
+1 to 5 for pairs","Initial rating:
+poor - excellent;
+
+Post exp pairs
+helpful - hindering; entertaining - boring; interested to use later - not; well organized - poorly; elegant - drab; innovative - conventional; clearly (showing) - poorly; easy (understand) - difficult;","We also asked the participants for an initial rating of the four cartogram types.
+
+At the end of the experiment, the participants were asked to rate the different cartogram types according to categories such as the helpfulness of the visualization, readability, and appearance, with a rating scale between pairs of polar opposite words and phrases. We considered the mode (most frequent response) and the mean (average response); see Fig. 5.",poor / excellent readability,
+True,True,https://dx.doi.org/10.1109/TVCG.2017.2745941,The Hologram in My Hand: How Effective is Interactive Exploration of 3D Visualizations in Immersive Tangible Augmented Reality?,2017,legib; likert; ,scatter plots; 3D scatter plots;,"Likert 9 points (""0-9"" ??)",difficulty (perception); difficulty (interaction); fatigue,Subjective ratings/preferences and perceived performances as indicated by the participants (0-9 Likert scale),feature easy to perceive;,
+True,True,https://dx.doi.org/10.1109/TVCG.2017.2744118,Visualizing Nonlinear Narratives with Story Curves,2017,readab; likert; ,"flows, paths;","1 to 5 (1 = Strongly Disagree, 5 = Strongly Agree)",able to read (visualization); able to apply (visualization); difficulty (task),"We were interested in assessing the readability and learnability of story curves. We conducted an online user study to see whether people with no expertise in visualization and narrative theory can learn to read story curves to perform low-level pattern reading tasks.
+
+In a follow-up survey (...) participants indicated that they are able to read story curves (...) and to apply story curves to represent nonlinear narratives in movies they had watched or will watch in the future
+
+The results of our user study indicate that story curves are easily graspable.",able to read,"Is it easy to read and follow the logic?
+Does it help you understand this visual design?
+Does it look pretty and pleasant?
+Does it attract your interest?"
+True,True,https://dx.doi.org/10.1109/TVCG.2018.2865192,Origin-Destination Flow Maps in Immersive Environments,2018,readab; likert; ,flows; maps; paths;,"preference ranking
+(cf same authors https://dx.doi.org/10.1109/TVCG.2020.3004137)",visual design; ease (use),"Visual Design Ranking = ""visual design""
+Readability Ranking = ""ease of use for the task""",good visual design; ease of use,
+True,True,https://dx.doi.org/10.1109/TVCG.2018.2865232,Narvis: Authoring Narrative Slideshows for Introducing Data Visualization Designs,2018,readab; likert;,slides with multiple types of vis,1 to 5 (1 = Very poor to 5 = Excellent),"easy (read, follow); help (understand); pretty, pleasant (look); attract (interest)","a questionnaire to rate the quality of the slideshow regarding readability (easy), utility (help), aesthetics (pretty, pleasant), attractiveness (attract)",easy to read; easy to follow,"Q1: This graph has good aesthetic appearance.
+Q2: This graph has good readability."
+True,True,https://dx.doi.org/10.1109/TVCG.2018.2865049,MotionRugs: Visualizing Collective Trends in Space and Time,2018,readab; legib; likert; ,vector glyphs;,5 points (very easy to very hard),interpret (pattern),"Before collecting the feedback, we first introduced the technique and educated the biologists on how to read and interpret a MotionRug.
+
+We collected the feedback on a basic questionnaire asked for each of the patterns how easy the experts judge the interpretation of the presented pattern",easy / hard to interpret,"Anatomical correspondence:
+- Use of patient anatomy (???)
+- Data type recognizability (easy to identify)
+- Assignment of plot to structure (effective / facilitate / intuitive ???)
+
+Comparability:
+- Identification of missing data (directly)
+- Plots are comparable at a glance (=at a glance)
+- Spacing adjustment is helpful (???)
+- Colormap shows value ranges (helpful (to find))
+- Left-right (facets) comparability (useful)
+- Simplification enables overview: faster 
+
+Temporal aspects:
+- Selection of desired timestep (quickly)
+- Movement animation (effective)
+- Quantitative readouts (???)
+- Point in time unambiguous (obvious to understand / unambiguous)
+
+Directional glyphs:
+- Orientation readable / determine the orientation
+- Orthogonality of force visible / assess direction of acting forces
+- Distribution of forces over time (???)"
+True,True,https://dx.doi.org/10.1109/TVCG.2018.2835485,A Semantic-Based Method for Visualizing Large Image Collections,2018,readab; likert;,point-based; text-based;,"1 to 7 (1 = strongly disagree, 7 = strongly agree)",easy (use); easy (system use); reasonable (viz or feature); useful (viz or feature); intuitive (visual design); aesthetic (visual design),!! Very unclear wether Q3 to Q8 are about viz or interactive features,intuitive;,"Understandability / usefulness (Figure 13):
+I understand this view
+This view is useful
+
+Readability (Figure 14):
+I see clearly... + informative item
+
+Interaction features (Figure 15):
+I understand this view
+I think this view is useful
+Highlighting is useful to recognize... + informative item
+Transmission Pathway is suitable to visualize... + informative item"
+True,True,https://dx.doi.org/10.1109/TVCG.2019.2941208,MineTime Insight: Visualizing Meeting Habits to Promote Informed Scheduling Decisions,2019,readab; likert;,calendar; mutliple charts in analytics view;,"1 to 7 (1 = strongly disagree, 7 - strongly agree)",easy (understand); help (task); useful (tool); pleasant (aesthetics); fast (task); ,"readability = Q1: easy to understand
+utility = Q2, Q3, Q4
+visual appearance / aesthetic appeal = Q5
+
+!!!Q6-Q8 not assigned to categories",easy to understand; fast to find the information,
+True,True,https://dx.doi.org/10.1109/TVCG.2020.3030404,SineStream: Improving the Readability of Streamgraphs by Minimizing Sine Illusion Effects,2020,readab; legib; likert; ,steamgraphs;,"7 points (Totally Disagree, Neutral, Totally Agree)",good aesthetic appearance (visualization); good readability (visualization);,score the three streamgraphs based on their aesthetic preference and perceived readability,good readability,
+True,True,https://dx.doi.org/10.1109/TVCG.2020.3030388,Visualization of Human Spine Biomechanics for Spinal Surgery,2020,readab; likert;,surface-based; colormaps; glyph-based; volumes; continuous colors;,"5 points bipolar (−−, −, ◦, +, ++)",use (visual); helpful (recognize); ? effective / facilitate / intuitive (assignment)?; at a glance (compare); helpful (to find); useful (for assessing); directly (identify); effective (animation); quickly (select); obvious / unambiguous (understand); visible / assessable (direction); determine / read (orientation); faster (overview),"(...) our representation of patient-specific vertebrae to be effective in facilitating intuitive assignments of data to structures
+(...) most found the direction of acting forces on a spinal disc to be assessable
+(...) stated that they could determine the orientation of load distribution across several discs
+(...) We also observed that experts usually interpreted the direction correctly, however, many required 3D scene interaction to do so.",readable; feature visible; recognizability; enable overview; unambiguous (obvious to understand); at a glance; able to determine; assessable; interpret,
+True,True,https://dx.doi.org/10.1109/TVCG.2020.3030437,In Search of Patient Zero: Visual Analytics of Pathogen Transmission Pathways in Hospitals,2020,readab; likert;,storyline; paths; timelines; node-links,"1 to 5, (1 = not at all, 5 = fully agree)",underestand (visualization); useful (visualization); see clearly (information in visualization); useful to recognize (feature of the visualization); suitable to visualize (information in visualization);,The online questionnaire showed the views from the use case and asked participants to read these visualizations and answer the usability and understandability questions as presented in Fig. 13–15.,see clearly;,"Q1 Our system is easy to learn
+Q2 Our system is easy to use
+Q3 The overview of the image collection is reasonable
+Q4 The overview of the image is useful
+Q5 The local structures of the images are reasonable
+Q6 The local structures of the images are helpful.
+Q7 The result of the semantic queries is reasonable.
+Q8 The result of the semantic queries is useful.
+Q9 The visual design is intuitive
+Q10 The visual design is aesthetic."
+True,True,https://dx.doi.org/10.1109/TVCG.2020.3030358,Once Upon A Time In Visualization: Understanding the Use of Textual Narratives for Causality,2020,readab; legib; likert; ,node-links; color-coded text;,"1 to 5 (1 = 
+extremely easy, 5 = extremely difficult)
+
+1 to 5 (1 = 
+extremely usefull, 5 = not at all useful)",easy to understand (vizualisation); easy to understand (text); useful (text),"We also asked our participants to rate the ease of-understanding of both graphs, and narratives (when applicable). After each DL. I
+
+In the conditions where TN was ON, we also asked participants to rate the usefulness of the narratives",easy to understand ,"Q1. It was easy to understand the presented information
+Q2. The tool could help me in analyzing past scheduling decisions retrospectively
+Q3. The tool could help me make sure meetings are scheduled more regularly
+Q4. Overall, MineTime Insight is a useful tool
+Q5. Overall, MineTime Insight is aesthetically pleasant
+Q6. It was fast to find the information requested in the practical tasks
+Q7. I would likely use this tool, if it was integrated with my current calendar application
+Q8. I would likely use this tool, if it required to install a new dedicated application"
+True,True,https://dx.doi.org/10.1109/TVCG.2020.3004137,"Tilt Map: Interactive Transitions Between Choropleth Map, Prism Map and Bar Chart in Immersive Environments",2020,readab; likert;,maps; VR;,"preference ranking
+(cf same authors https://dx.doi.org/10.1109/TVCG.2018.2865192)",visual design; ease (use),"Visual Design Ranking = ""visual design""
+Readability Ranking = ""ease of use for the task""",ease of use,
+True,True,https://dx.doi.org/10.1109/TVCG.2021.3068337,Declutter and Focus: Empirically Evaluating Design Guidelines for Effective Data Communication,2021,legib; likert;,bar charts; line charts;,1 to 5 for pairs,visually appealing; hideous - beautiful; clear; confused - sense; unprofessional - professional; untrustworthy - trustworthy;,"We next presented all three visualization designs of each graph topic simultaneously to each participant, and asked them to rate the three designs.
+- Aesthetics: rated from one (“very hideous”) to five (“very beautiful”).
+- Clarity: rated from one (“I am utterly confused”) to five (“makes perfect sense”).
+- Professionalism: rated from one (“very unprofessional”) to five (“very professional”).
+- Trustworthiness: rated from one (“very untrustworthy”) to five (“very trustworthy”).",I am confused - it makes sense;,"Aesthetics: “Overall, is this a visually appealing image?”, rated from one (“very hideous”) to five (“very beautiful”).
+
+Clarity: “Is it clear what information is being presented and why?”, rated from one (“I am utterly confused”) to five (“makes perfect sense”).
+
+Professionalism: “Does this graph look like something you would see in a professional environment?”, rated from one (“very unprofessional”) to five (“very professional”).
+
+Trustworthiness: “Based on the presentation, how trustworthy is the person who made this graph?”, rated from one (“very untrustworthy”) to five (“very trustworthy”)."
+True,True,https://dx.doi.org/10.1109/TVCG.2021.3085327,InfoColorizer: Interactive Recommendation of Color Palettes for Infographics,2021,readab; likert;,infographics;,"1 to 7 (1 = low readability, 7 = high readability)",please score by element readability,"For each problem set, we asked participants to provide two 7-point scores (the higher is better), on color aesthetics and element readability.",readability;,
+True,True,https://dx.doi.org/10.1109/TVCG.2021.3114789,E-ffective: A Visual Analytic System for Exploring the Emotion and Effectiveness of Inspirational Speeches,2021,readab; likert;,dashboard with multiple vis; text-based; line-based; dot-based; maps; ...,1 to 7,easy (visualization for understanding); useful (visualization for understanding); easy (system for task); useful (system for task); ,"In our usability test, we wanted to evaluate how useful and easy to use our system and visualization methods are.
+
+Following the completion of both the user tasks and free analysis, user experiences of participants were scored for usefulness and ease of use in a user experience questionnaire. The questionnaire evaluates both visualization design and system design.",easy to use for understanding,"Visualizations:
+Using E-factor to understand the distribution of data was...
+Using E-spiral to understand the change of emotion in a speech was...
+Using E-script to understand the emotion in speech scripts was...
+Using E-similarity to understand individual easy speeches among effective factors was....
+Using E-distribution to understand the effectiveness of factors between levels was...
+
+System:
+Using temporal and geographical information to understand the distribution of data was...
+Comparing different speeches and similar speeches was...
+Exploring and understanding speech videos guided by emotional cues was...
+Understanding the effectiveness estimation and advice was...
+Exploring the effectiveness of easy speech factors using the system was..."
+True,True,https://dx.doi.org/10.1109/TVCG.2022.3209354,HiTailor: Interactive Transformation and Visualization for Hierarchical Tabular Data,2022,readab; likert; ,dashboard with multiple charts; bar graphs; line charts; pie charts; dot based; areas,"1 to 5 (1 = Strongly disagree, 2 = Disagree, 3 = Undecided,  4 = Agree, 5 = Strongly agree)",easy (learn); easy (system features); intuitive (interactions); helpful (system features); satisfactory (visualization); facilitate understanding (visualization or tool ?),"At the end of the experiment, we asked the participants to rate HiTailor from different aspects using a five-point Likert scale.
+
+Q4, Q6, Q7 might be related to visualizations readability",facilitate understanding;,"Q1: Easy to Learn.
+Q2: Easy to use.
+Q3: Interactions intuitive.
+Q4: Transformations helpful.
+Q5: Recommendation helpful.
+Q6: Visualization satisfactory.
+Q7: Facilitate data understanding."
+True,True,https://dx.doi.org/10.1109/TVCG.2022.3209475,Effects of View Layout on Situated Analytics for Multiple-View Representations in Immersive Visualization,2022,readab; likert; ,bar charts; line charts; VR;,1 to 7,usability (layout); utility (layout); workload (user); confidence (answer); and satisfaction (system for task),"We only evaluated the effectiveness of the proposed method in positioning six views at maximum, yet view occlusion happened and user preference was reduced. We have provided user interactions including view arrangement to mitigate 
+the issue. More interactions can be incorporated to further improve view readability.",easy to learn; easy to understand,"Usability: Easy to learn and understand
+Utility: Useful for spatial situatedness
+Utility: Useful for multiple-view analytics
+Workload: Do not need much physical activity
+Workload: Do not need much mental activity
+Confidence: Have confidence in answers
+Satisfaction: Be satisfied with analysis"
+True,True,https://dx.doi.org/10.1109/TVCG.2021.3092680,Designing With Pictographs: Envision Topics Without Sacrificing Understanding,2022,readab; likert; deciph;,glyph based; surface based; bar charts,1 to 5 preference for pairs,quicker and easier to read (visualization); visually appealing (visualization); clearer and easier to understand (visualization); easier to imagine (data); cluttered (visualization); complex (visualization); important (topic); familiar (topic),"For each metric, participants indicated on a 5-point Likert scale which of the two versions of the chart best satisfied the prompt.",quick to read; easy to read,"Readability: Which of these charts is quicker and easier to read?
+Visual Appeal Which of these charts is more visually appealing?
+Understandability Which of these charts is clearer and easier to understand?
+Envisioning Which of these charts makes the data easier to imagine?
+Clutter Which of these charts is more visually cluttered?
+Complexity Which of these charts is more complex?
+Importance Which of these charts makes its topic seem more important?
+Familiarity How familiar are you with the topic of this chart?"
+True,True,https://dx.doi.org/10.1109/TVCG.2022.3144975,Visualizing the Scripts of Data Wrangling with SOMNUS,2022,readab; likert; ,tables; text; path; node-link;,1 to 7,helpful (visualization); interpretable (visualization),"After the main experiment for each technique, participants were asked to rate the usefulness  and intuitiveness of the technique.
+
+After the study, a semi-structured interview was conducted to collect their feedbacks.",interpretable;,
+True,True,https://dx.doi.org/10.1109/TVCG.2022.3163727,SD 2 : Slicing and Dicing Scholarly Data for Interactive Evaluation of Academic Performance,2022,readab; likert;,bar charts;,"1 to 5
+
+ranking (order) - not for likert items
+
+A vs B",clear to understand (visualization); easy to read (visualization);,"Pivotal study
+Participants rated different factors on a five-point Likert scale in two aspects: clarity (clear to understand) and readability (easy to read). In addition, they were asked to list the three most effective design choices in order.
+
+After performing the tasks, they were asked to rate the two choices in terms of clarity and readability. To avoid bias, the statements were provided in two opposite manner: the first stated in the form that “A is better than B” and the second stated in the form that “B is better than A”.",clear to understand; easy to read;,
+True,False,https://dx.doi.org/10.1109/TVCG.2011.234,Stereoscopic Highlighting: 2D Graph Visualization on Stereo Displays,2011,legib; likert; ,node-links,1 to 5,helpful for the task (visualization feature); performed faster (user); performed more accurately (user);,rate visual cues,,
+True,False,https://dx.doi.org/10.1109/TVCG.2013.155,Evaluation of Filesystem Provenance Visualization Tools,2013,readab; likert; deciph;,node-links;,7 points,easy (use); confident (user); easily able,"3 questions gauged subjective ease of use, self-efficacy, and subjective assessment of the tool’s effectiveness for the task: “How easy was it to use the tool?”, “How confident are you in your answers(s)?”, and “How easily were you able to accomplish this task?”.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2013.76,KelpFusion: A Hybrid Set Visualization Technique,2013,readab; legib; likert; ,maps; areas;,1 to 5,confident (answer); cluttered; pleasing (aesthetically); strong (sens of grouping?),"we asked how confident they were answering each type of question, how cluttered and how aesthetically pleasing the visualization was, and  finally whether the visualization provided a strong sense of grouping",,
+True,False,https://dx.doi.org/10.1109/TVCG.2014.2346250,DimpVis: Exploring Time-varying Information Visualizations by Direct Manipulation,2014,legib; likert;,scatter plots;,1 to 5 (1 = Strongly Disagree to 5 = Strongly Agree),easy (system use); natural (system use); expected (system behavior); fast (questions); easy (questions); satisfied; prefer; enjoy,"rate each technique subjectively
+!!! ""technique"" here refers to an interaction technique",,
+True,False,https://dx.doi.org/https://dx.doi.org/10.1109/TVCG.2014.2346426,The Influence of Contour on Similarity Perception of Star Glyphs,2014,readab; legib; likert; ,radar charts;,"1 to 7 
+(2 = easy to use, 5 = slightly difficult to use, 6 = difficult to use, 7 = very difficult to use)",easy / difficult (use),"6.3 Hypotheses - (...) The additional anchor points help to better read and compare line distances. (...) The viewer has to invest more mental effort to process the additional visual information.
+
+questionnaire for subjective feedback on aesthetics of the designs and strategies used to answer the questions",,
+True,False,https://dx.doi.org/10.1109/TVCG.2014.2346371,Design and Evaluation of Interactive Proofreading Tools for Connectomics,2014,readab; likert; deciph;,spatial; (connectome),"1 to 7 (1 = Fully Disagree, 7 = Fully Agree)",easy (use); pleasing;,,,
+True,False,https://dx.doi.org/10.1109/TVCG.2014.2322594,Visual Adjacency Lists for Dynamic Graphs,2014,readab; likert; ,node-links;,"1 to 5 (1 = good, 5 = bad).",suitable (vizualisation for task),"After completing all four tasks, the participants filled out a further questionnaire, in which they rated the suitability of the different techniques for the different tasks",,
+True,False,https://dx.doi.org/10.1109/TVCG.2014.2329308,The Impact of Interactivity on Comprehending 2D and 3D Visualizations of Movement Data,2014,legib; likert; ,maps; motion paths;,"1 to 5 (1 = Not preferred/Very difficult, 5 = Preferred/Very
+easy)",preference (tool); easy (tool),"In addition to tracking performance measures, we also collected subjects’ opinions regarding each visualization technique at the end of the experiment. Participants replied to eight statements.
+
+!!! in here tool = vizualisation + interaction",,
+True,False,https://dx.doi.org/10.1109/TVCG.2016.2520921,"A Study of Layout, Rendering, and Interaction Methods for Immersive Graph Visualization",2016,legib; likert; ,node-links;,"1 to 7 (1 = very difficult, 7 = very easy)
+
+1 to 7 (1 = no confidence, 7 = complete confidence)",confidence; ease (use);,"confidence ratings, ease-of-use ratings",,
+True,False,https://dx.doi.org/10.1109/TVCG.2016.2535234,Embedding Spatio-Temporal Information into Maps by Route-Zooming,2016,readab; legib; likert; ,maps; multiple charts;,"1 to 5 (5 = Strongly agree, 4 = Agree, 3 = Neutral,  2 = Disagree, 1 = Strongly disagree
+)",performance;,"Rate the performance when experiencing Embedded View or Linked View with respect to two questions:  
+
+Q1: can Embedded View help improve the performance of finding a specific traffic flow in different roads
+
+Q2: can Linked View help improve the performance of finding a specific traffic flow in different roads",,
+True,False,https://dx.doi.org/10.1109/TVCG.2017.2764459,StreamExplorer: A Multi-Stage System for Visually Exploring Events in Social Streams,2017,readab; likert;,multiple; continuous color; node-links; pie charts;,"1 to 7 (1 = strongly disagree, 7 = strongly agree)",satisfied (system); easy (learn); easy (system use); useful (visualization); intuitive (visualization),"For each question, users were asked to rate their satisfaction regarding three categories, namely, tracking,  exploration, and comparison, which corresponded to the design rationale.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2018.2889081,Multimodal Analysis of Video Collections: Visual Exploration of Presentation Techniques in TED Talks,2018,readab; legib; likert;,multiple; glyph-based; flows; matrix; timeline;,"1 to 7 (1 = not at all, 2 = strongly disagree, 3 = disagree, 4 = neutral, 5 = agree, 6 = strongly agree, 7 = absolutely)",usable (system); useful (visualization); useful (viz element); useful (system feature / viz element),"The questionnaires were designed to evaluate the usefulness of our system and gather explicit feedback on the visual design (Fig. 5). They were created under the guidance suggested by Rossi et al. [42] to ensure reasonableness, appropriateness, feasibility, and stakeholder engagement. We adopted a 7-likert scale and calculated the mean score and standard deviation.",,
+True,False,https://dx.doi.org/https://dx.doi.org/10.1109/TVCG.2019.2934803,"There Is No Spoon: Evaluating Performance, Space Use, and Presence with Expert Domain Users in Immersive Analytics",2019,legib; likert;,scatter plots; parallel plots; 3D; VR,"4 points (No, Not really, Kind of, Yes)",?????,"We predicted that participants would suffer from reduced text legibility (A3.4). However, the reported Likert scores for the ability to examine closely and obtain details from objects in the environment was high (Figure 8), which undermines this prediction.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2019.2934398,DataShot: Automatic Generation of Fact Sheets from Tabular Data,2019,readab; likert;,fact sheets;,"1 to 5 (1 = strongly disagree, 5 = strongly agree)",insightful; comprehensive; effective; easy (understand); aesthetic; expressive; useful; usability,"Goal is to asses wether:
+- DataShot can assist users in finding insightful facts;
+- the visualisations generated can aid users in understanding the data facts;
+- the final presentation of DataShot can help users communicate their findings
+
+Content: Insightful, Comprehensive, Effective
+Visual: Easy to understand, Aesthetic, Expressive
+System: Useful, Usability",,
+True,False,https://dx.doi.org/10.1109/TVCG.2020.3030442,SEQUENCE BRAIDING: Visual Overviews of Temporal Event Sequences and Attributes,2020,readab; likert; ,flows; node-links;,"probably 5 points
++ preference ranking",confident (user); easy (task); useful to display (design),"Ease of use for understanding trends and patterns = How easy were the tasks? 
+useful for displaying trends = Which design is the most useful to display trends?",,
+True,False,https://dx.doi.org/https://dx.doi.org/10.1109/TVCG.2019.2906900,Eiffel: Evolutionary Flow Map for Influence Graph Visualization,2020,readab; likert;,node-links; paths;,1 to 6,help (visualisation); like (experience),"After the subject had completed the task for each visualization, s/he was asked to answer two subjective questions based on a 0-6 Likert scale in which 6 is the best and 0 the worst.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2020.2986996,t-viSNE: Interactive Assessment and Interpretation of t-SNE Projections,2020,readab; likert; ,multiple; heatmaps; dot-based; line-based; bar charts,"1 to 7
+or ""Non applicable""",(cf ICE-T),"The ICE-T evaluation form focuses on the value in and the interactivity of visualizations.
+Insight is the ability to impel and identify insights or insightful questions about the data.
+Confidence is the ability to produce confidence and trustworthiness in the data.
+Essence is the capability to communicate concisely an overall essence of the data.
+Time is the capability to reduce the necessary total time to respond to a large variety of queries about data.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2020.3041745,Task-Based Effectiveness of Interactive Contiguous Area Cartograms,2020,readab; legib; likert;,maps;,1 to 5 for pairs (cf https://dx.doi.org/10.1109/TVCG.2016.2642109 =[10]),difficult (use) - easy; helpful - hindering; redundant - informative; immediate (impression) - not; ugly - elegant; boring - entertaining; innovative - conventional,"Attitude study: Adapting the semantic differential technique used by Dent [32] and Nusrat et al. [10], we asked participants to rate the aesthetics and effectiveness of the three interactive features evaluated in the experiment. We selected pairs of opposite words (e.g., “conventional” versus “innovative,” “hindering” versus “helpful”). For every pair of words, we asked participants to rate each interactive feature on a 5-point Likert scale. Following the example of [10], participants did not have to give separate responses for each task type. Hence, the participants responded three times to each word pair, once for each interactive feature.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2021.3086414,HisVA: A Visual Analytics System for Studying History,2021,readab; likert; ,maps; charts; ,"1 to 7 (1 = strongly negative, 7 = strongly positive)",help (tool for task); useful (visualization + interactive feature); useful (tool in general),"We asked Q1 to find out if HisVA helped the users feel that they could effectively search for learning materials.
+
+Q2–Q4 were asked to evaluate how users evaluate each function of HisVA for the tasks.
+
+Q5 was to ascertain the overall effectiveness of HisVA",,
+True,False,https://dx.doi.org/10.1109/TVCG.2021.3114822,CoUX: Collaborative Visual Analysis of Think-Aloud Usability Test Videos for Digital Interfaces,2021,readab; likert;,multiple; glyph based; timeline; line-based; ,"1 to 5 (1 = Strongly disagree, 5 = Strongly Agree)",quickly (system); useful (visualization); easy (system feature for task); confident (decisions and answers); easily & quickly (decisions); fairly & comfortaby (decisions); like (system feature),"!! the authors use the term ""system feature"" both for visualization and interactive features but I renamed those accordingly to this work's naming convention!!",,
+True,False,https://dx.doi.org/10.1109/TVCG.2021.3114811,"Learning Objectives, Insights, and Assessments: How Specification Formats Impact Design",2021,readab; likert; ,multiple charts; bar graphs; line charts; pie charts; dot based; areas,"1 to 5 (1 = Extremely good, 5 = Extremely bad)",-,"Preference
+Each participant rated each visualization once based on a single specification.
+4 conditions: baseline (vis without specification) + 3 types of specifications
+
+!! in this study ""readability"" and ""memorability"" are names of conditions and tested through accuracy of answers !!
+Accuracy: readability & memorability - The no-visualization baseline condition allows us to determine the question’s baseline difficulty based on guessing and prior knowledge. Then, we evaluated readability accuracy for answering the assessment while viewing the visualization. Finally, we evaluated the memorability accuracy on how effective the visualizations were for information that was to be remembered.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2022.3209477,LargeNetVis: Visual Exploration of Large Temporal Networks Based on Community Taxonomies,2022,readab; likert; ,multiple; node-links; matrix; dot based,"1 to 5 (1 = Strongly disagree, 2 = Disagree, 3 = I don't know,  4 = Agree, 5 = Strongly agree)",scalability (system); speed (system); usefulness (system); intuitiveness and ease of use (system); useful and helpful (visualizations),"!! the authors use the term ""system visual"" for interactive features of the system and layout for visualizations but I renamed those accordingly to this work's naming conventionin the previous cell !!
+
+Questions from (a) concern the system’s visual scalability (LQ1), speed (LQ2), usefulness (LQ3), and intuitiveness and ease of use (LQ4). Questions from (b) concern whether each layout is useful and helps in the network analysis.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2022.3209484,D-BIAS: A Causality-Based Human-in-the-Loop System for Tackling Algorithmic Bias,2022,readab; likert; deciph;,networks; surface charts; bar charts;,"Usability, Interpretability, Trust: 1 to 5 (1 = Strongly disagree, 5 = Strongly agree)
+
+Workload: 1 to 5 (1 = very low, 5 = very high)
+
+Accountability: 1 to 5 (1 = System’s capability, 5 = My input to the system)
+",mentally demanding (task); hard (work); ,"Each participant was asked to answer a set of 13 survey questions to quantitatively measure usability, interpretability, workload, accountability and trust.
+
+- To capture cognitive workload, we selected two applicable questions from the NASA-LTX task load index [23]
+- For capturing usability, we picked 3 questions from the System Usability Scale (SUS) [7]
+- To capture accountability, we asked two questions based on previous studies [9, 19].
+- To capture interpretability, we consulted Madsen Gregor scale [30] and adopted 3 questions for our application.
+- For measuring trust, we referred to McKnight’s framework on Trust [31, 32] and other studies [15, 19] to come up with 3 questions for our specific case.",,
+True,False,https://dx.doi.org/10.1109/TVCG.2022.3209480,Geo-Storylines: Integrating Maps into Storyline Visualizations,2022,readab; legib; likert; ,flows; maps; paths;,"Confidence: 1 to 5 (1 = Highly not
+confident, 2 = Not confident, 3 = Neutral, 4 = Confident, 5 = Highly confident)
+
+
+Easiness: 1 to 5 (1 = Very hard, 2 = Hard, 3 = Neutral, 4 = Easy, 5 = Very easy).
+
+(+ ranking)","confident (user); easy (to do the task with the vis)
+
+preference (ranking)","- Self-reported confidence
+- Self-reported easiness to do the task
+
+Additionally, we collected participants’ strategies per task, their overall feedback and preference of the three designs.
+
+(!! from the addtional content I looked at the comments => the researchers used the term ""visibility"" for comments we would have categorized as readbility ones...)",,
+False,False,https://dx.doi.org/10.1109/INFVIS.2002.1173148,"SpaceTree: Supporting Exploration in Large Node Link Tree, Design Evolution and Empirical Evaluation",2002,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/INFVIS.2003.1249008,EdgeLens: An Interactive Method for Managing Edge Congestion in Graphs,2003,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/VAST.2006.261428,Visual Analysis of Historic Hotel Visitation Patterns,2006,legib; likert; deciph;,,,,,,
+False,False,doi.org/10.1109/TVCG.2008.178,Vispedia * : Interactive Visual Exploration of Wikipedia Data via Search-Based Integration,2008,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2009.176,ResultMaps: Visualization for Search Interfaces,2009,legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2009.171,Participatory Visualization with Wordle,2009,legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/VAST.2009.5332595,Finding Comparable Temporal Categorical Records: A Similarity Measure with an Interactive Visualization,2009,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/VAST.2010.5652885,Click2Annotate: Automated Insight Externalization with Rich Semantics,2010,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/VAST.2010.5652895,"Geo-Historical Context Support for Information Foraging and Sensemaking: Conceptual Model, Implementation, and Assessment",2010,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2011.160,A Study on Dual-Scale Data Charts,2011,readab; legib; likert;deciph;,charts,,,,,
+False,False,https://dx.doi.org/10.1109/VAST.2011.6102456,SensePlace2: GeoTwitter Analytics Support for Situational Awareness,2011,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2013.209,Understanding Interfirm Relationships in Business Ecosystems with Interactive Visualization,2013,readab; likert; ,node-links;,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2013.191,SketchStory: Telling More Engaging Stories with Data through Freeform Sketching,2013,readab; legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2013.233,Visualizing Request-Flow Comparison to Aid Performance Diagnosis in Distributed Systems,2013,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2013.126,A Systematic Review on the Practice of Evaluating Visualization,2013,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2014.2352953,Activity Sculptures: Exploring the Impact of Physical Visualizations on Running Activity,2014,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2014.2346420,Comparative Eye Tracking Study on Node-Link Visualizations of Trajectories,2014,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2014.2346575,Finding Waldo: Learning about Users from their Interactions,2014,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2014.2337337,Munin: A Peer-to-Peer Middleware for Ubiquitous Analytics and Visualization Spaces,2014,legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2015.2467471,A Linguistic Approach to Categorical Color Assignment for Data Visualization,2015,legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/VAST.2015.7347634,Comparative Visual Analysis of Vector Field Ensembles,2015,readab; legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2017.2745859,EdWordle: Consistency-preserving Word Cloud Editing,2017,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2017.2745958,Active Reading of Visualizations,2017,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2017.2744898,VIGOR: Interactive Visual Exploration of Graph Query Results,2017,readab; likert; ,,?,,,,
+False,False,doi.org/10.1109/TVCG.2017.2744738,SkyLens: Visual Analysis of Skyline on Multi-Dimensional Data,2017,legib; likert;,,,,,,
+False,False,doi.org/10.1109/VAST.2017.8585487,"The ""y"" of it Matters, Even for Storyline Visualization",2017,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2017.2723393,Keshif: Rapid and Expressive Tabular Data Exploration for Novices,2017,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2017.2764895,PhotoRecomposer: Interactive Photo Recomposition by Cropping,2017,readab; likert;,,,,,,
+False,False,doi.org/10.1109/TVCG.2018.2865231,"SmartCues: A Multitouch Query Approach for Details-on-Demand through Dynamically Computed Overlays Hariharan Subramonyam, Student Member, IEEE, and Eytan Adar a Original bar chart with no annotations",2018,legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2018.2865142,Glanceable Visualization: Studies of Data Comparison Performance on Smartwatches,2018,readab; legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2018.2864907,Looks Good To Me: Visualizations As Sanity Checks,2018,legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2018.2859973,Commercial Visual Analytics Systems-Advances in the Big Data Analytics Field,2018,readab; likert;,,,,,,
+False,False,doi.org/10.1109/MCG.2018.2879066,Graphoto: Aesthetically Pleasing Charts for Casual Information Visualization,2018,legib; likert; ,,,aesthetics (visually pleasing),,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934807,A Comparison of Visualizations for Identifying Correlation over Space and Time,2019,legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934555,Pattern-Driven Navigation in 2D Multiscale Visualizations with Scalable Insets,2019,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934432,Discriminability Tests for Visualization Effectiveness and Scalability,2019,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934784,A Comparison of Radial and Linear Charts for Visualizing Daily Patterns,2019,readab; likert; deciph;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934557,OntoPlot: A Novel Visualisation for Non-hierarchical Associations in Large Ontologies,2019,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934337,Temporal Views of Flattened Mitral Valve Geometries,2019,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934668,FlowSense: A Natural Language Interface for Visual Data Exploration within a Dataflow System,2019,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934300,GUIRO: User-Guided Matrix Reordering,2019,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2934669,Exploranative Code Quality Documents,2019,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2892415,MARVisT: Authoring Glyph-Based Visualization in Mobile Augmented Reality,2019,legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2945960,Phoenixmap: An Abstract Approach to Visualize 2D Spatial Distributions,2019,readab; legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2019.2963651,Vis-a-Vis: Visual Exploration of Visualization Source Code Evolution,2019,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3030351,Chartem: Reviving Chart Images with Data Embedding,2020,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3030403,Calliope: Automatic Visual Data Story Generation from a Spreadsheet,2020,readab; likert;,,,,"Story: Insightful, Comprehensive, Effective
+Visualization: Understandabe, Aesthetic, Expressive
+System: Useful, Ease of use",,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3030446,The Effectiveness of Interactive Visualization Techniques for Time Navigation of Dynamic Graphs on Large Displays,2020,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3030428,Preserving Minority Structures in Graph Sampling,2020,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3030443,CAVA: A Visual Analytics System for Exploratory Columnar Data Augmentation Using Knowledge Graphs,2020,readab; likert;,,,,,,
+False,False,doi.org/10.1109/VAST50239.2020.00008,"A Visual Analytics Approach to Debugging Cooperative, Autonomous Multi-Robot Systems' Worldviews",2020,legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.2968911,Visualization of 3D Stress Tensor Fields Using Superquadric Glyphs on Displacement Streamlines,2020,likert;deciph;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3009003,A Virtual Reality Memory Palace Variant Aids Knowledge Retrieval from Scholarly Articles,2020,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3035823,"Rainbow Dash: Intuitiveness, interpretability and memorability of the rainbow color scheme in visualization",2020,readab; legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2020.3030363,Improving the Usability of Virtual Reality Neuron Tracing with Topological Elements,2020,likert; deciph;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2021.3114781,VideoModerator: A Risk-aware Framework for Multimodal Video Moderation in E-Commerce,2021,legib; likert;,no data vis,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2021.3114775,Kineticharts: Augmenting Affective Expressiveness of Charts in Data Stories with Animation Design,2021,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2021.3098240,A Survey of Perception-Based Visualization Studies by Task,2021,readab; legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209385,Rigel: Transforming Tabular Data by Declarative Mapping,2022,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209486,Supporting Expressive and Faithful Pictorial Visualization Design with Visual Style Transfer,2022,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209425,DendroMap: Visual Exploration of Large-Scale Image Datasets for Machine Learning with Treemaps,2022,likert;deciph;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209482,A Framework for Multiclass Contour Visualization,2022,readab; legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209390,BeauVis: A Validated Scale for Measuring the Aesthetic Pleasure of Visual Representations,2022,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209491,Measuring Effects of Spatial Visualization and Domain on Visualization Task Performance: A Comparative Study,2022,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209427,"Comparative Evaluation of Bipartite, Node-Link, and Matrix-Based Network Representations",2022,readab; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209421,MEDLEY: Intent-based Recommendations to Support Dashboard Composition,2022,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3209383,Striking a Balance: Reader Takeaways and Preferences when Integrating Text and Charts,2022,readab; legib; likert; ,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3184186,A Unified Understanding of Deep NLP Models for Text Classification,2022,readab; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3184993,Visualization in Motion: A Research Agenda and Two Evaluations,2022,readab; legib; likert;,,,,,,
+False,False,https://dx.doi.org/10.1109/TVCG.2022.3175626,ClinicalPath: a Visualization tool to Improve the Evaluation of Electronic Health Records in Clinical Decision-Making,2022,readab; likert; ,,,,,,

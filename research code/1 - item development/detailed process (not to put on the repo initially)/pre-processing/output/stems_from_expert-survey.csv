@@ -1,0 +1,177 @@
+stems,Tokens,Sources_count,Sources_density
+abnorm,{'abnormal': 1},1,0.034482758620689655
+amount,{'amount': 1},1,0.034482758620689655
+attent,{'attention': 1},1,0.034482758620689655
+caption,{'caption': 1},1,0.034482758620689655
+characterist,{'characteristics': 1},1,0.034482758620689655
+choic,{'choices': 1},1,0.034482758620689655
+cluster,{'clusters': 1},1,0.034482758620689655
+clutter,"{'clutter': 1, 'cluttered': 2}",3,0.10344827586206896
+communiti,{'communities': 1},1,0.034482758620689655
+compon,{'components': 1},1,0.034482758620689655
+context,{'context': 1},1,0.034482758620689655
+data,{'data': 8},8,0.27586206896551724
+decis,{'decisions': 1},1,0.034482758620689655
+descript,{'description': 1},1,0.034482758620689655
+design,{'design': 1},1,0.034482758620689655
+detail,{'details': 3},3,0.10344827586206896
+direct,{'direction': 1},1,0.034482758620689655
+element,{'elements': 1},1,0.034482758620689655
+encod,"{'encoding': 2, 'encoded': 1, 'encodings': 1}",4,0.13793103448275862
+entiti,{'entities': 1},1,0.034482758620689655
+entri,{'entry': 1},1,0.034482758620689655
+everyth,{'everything': 1},1,0.034482758620689655
+expertis,{'expertise': 1},1,0.034482758620689655
+expert,{'experts': 1},1,0.034482758620689655
+fact,{'fact': 1},1,0.034482758620689655
+featur,{'features': 1},1,0.034482758620689655
+general,{'general': 1},1,0.034482758620689655
+group,{'groups': 1},1,0.034482758620689655
+hierarchi,{'hierarchy': 1},1,0.034482758620689655
+inform,"{'information': 11, 'informative': 2}",12,0.41379310344827586
+insight,{'insight': 1},1,0.034482758620689655
+key,{'key': 1},1,0.034482758620689655
+lay,{'lay': 1},1,0.034482758620689655
+legend,{'legend': 2},2,0.06896551724137931
+level,{'level': 1},1,0.034482758620689655
+main,{'main': 3},3,0.10344827586206896
+major,{'major': 1},1,0.034482758620689655
+map,{'mapping': 1},1,0.034482758620689655
+mean,"{'meaning': 4, 'means': 1}",5,0.1724137931034483
+messag,"{'message': 5, 'messages': 1}",6,0.20689655172413793
+other,{'others': 2},2,0.06896551724137931
+outlier,{'outliers': 4},4,0.13793103448275862
+overview,{'overview': 2},2,0.06896551724137931
+pattern,"{'pattern': 2, 'patterns': 5}",7,0.2413793103448276
+person,{'person': 1},1,0.034482758620689655
+point,"{'point': 1, 'points': 1}",2,0.06896551724137931
+properti,{'properties': 1},1,0.034482758620689655
+question,"{'question': 1, 'questions': 1}",2,0.06896551724137931
+read,"{'reading': 1, 'read': 6}",7,0.2413793103448276
+relationship,{'relationships': 3},3,0.10344827586206896
+represent,{'representations': 1},1,0.034482758620689655
+select,{'selection': 1},1,0.034482758620689655
+similar,{'similar': 1},1,0.034482758620689655
+skill,{'skills': 1},1,0.034482758620689655
+stori,{'story': 1},1,0.034482758620689655
+structur,{'structure': 1},1,0.034482758620689655
+trend,"{'trend': 2, 'trends': 2}",4,0.13793103448275862
+understand,"{'understand': 16, 'understanding': 1}",16,0.5517241379310345
+valu,{'values': 3},3,0.10344827586206896
+visual,"{'visual': 4, 'visually': 2}",6,0.20689655172413793
+clear,"{'clear': 4, 'clearly': 7}",8,0.27586206896551724
+color,"{'color': 2, 'colors': 2}",4,0.13793103448275862
+communic,"{'communicate': 2, 'communicated': 1}",2,0.06896551724137931
+concret,{'concrete': 1},1,0.034482758620689655
+confus,"{'confused': 1, 'confusing': 3}",4,0.13793103448275862
+convey,"{'convey': 2, 'conveys': 2}",4,0.13793103448275862
+differenti,{'differentiate': 1},1,0.034482758620689655
+easier,{'easier': 1},1,0.034482758620689655
+easi,{'easy': 9},9,0.3103448275862069
+enough,{'enough': 2},2,0.06896551724137931
+extract,{'extract': 6},6,0.20689655172413793
+interest,"{'interested': 1, 'interesting': 1}",2,0.06896551724137931
+interpret,{'interpret': 6},6,0.20689655172413793
+item,{'items': 1},1,0.034482758620689655
+know,{'know': 4},4,0.13793103448275862
+learn,"{'learned': 1, 'learn': 1}",2,0.06896551724137931
+line,{'lines': 1},1,0.034482758620689655
+look,{'look': 2},2,0.06896551724137931
+meaning,{'meaningful': 2},2,0.06896551724137931
+need,"{'needed': 2, 'needs': 1}",3,0.10344827586206896
+overal,{'overall': 2},2,0.06896551724137931
+recov,{'recover': 1},1,0.034482758620689655
+relev,{'relevant': 4},4,0.13793103448275862
+repres,"{'represent': 1, 'represented': 1}",2,0.06896551724137931
+requir,"{'required': 1, 'require': 1}",2,0.06896551724137931
+result,{'results': 1},1,0.034482758620689655
+say,{'says': 1},1,0.034482758620689655
+see,{'see': 5},5,0.1724137931034483
+shape,{'shapes': 2},2,0.06896551724137931
+suffici,{'sufficient': 1},1,0.034482758620689655
+unexpect,{'unexpected': 1},1,0.034482758620689655
+verbal,{'verbal': 1},1,0.034482758620689655
+annot,{'annotations': 1},1,0.034482758620689655
+arrang,{'arrangement': 1},1,0.034482758620689655
+distort,{'distortion': 1},1,0.034482758620689655
+eye,{'eyes': 1},1,0.034482758620689655
+intend,{'intended': 1},1,0.034482758620689655
+label,{'labels': 1},1,0.034482758620689655
+mark,{'marks': 1},1,0.034482758620689655
+order,{'ordering': 1},1,0.034482758620689655
+part,{'parts': 2},2,0.06896551724137931
+plot,{'plot': 1},1,0.034482758620689655
+present,"{'presentation': 1, 'presented': 1, 'present': 1}",3,0.10344827586206896
+scale,{'scale': 1},1,0.034482758620689655
+spatial,{'spatial': 1},1,0.034482758620689655
+takeaway,{'takeaways': 1},1,0.034482758620689655
+text,{'text': 1},1,0.034482758620689655
+variabl,{'variables': 1},1,0.034482758620689655
+annoy,{'annoyed': 1},1,0.034482758620689655
+awar,{'aware': 1},1,0.034482758620689655
+awesom,{'awesome': 1},1,0.034482758620689655
+blur,{'blurring': 1},1,0.034482758620689655
+challeng,{'challenging': 1},1,0.034482758620689655
+complex,{'complex': 1},1,0.034482758620689655
+comprehend,{'comprehend': 2},2,0.06896551724137931
+confid,{'confident': 3},3,0.10344827586206896
+difficult,{'difficult': 4},4,0.13793103448275862
+disori,{'disorienting': 1},1,0.034482758620689655
+drawn,{'drawn': 1},1,0.034482758620689655
+identifi,"{'identifiable': 1, 'identify': 4}",5,0.1724137931034483
+imag,{'image': 1},1,0.034482758620689655
+intuit,{'intuitive': 1},1,0.034482758620689655
+irrit,{'irritated': 1},1,0.034482758620689655
+necessari,{'necessary': 1},1,0.034482758620689655
+overwhelm,{'overwhelming': 1},1,0.034482758620689655
+pleas,{'pleasing': 1},1,0.034482758620689655
+qualiti,{'quality': 1},1,0.034482758620689655
+readabl,{'readable': 3},3,0.10344827586206896
+size,{'sized': 1},1,0.034482758620689655
+use,{'useful': 1},1,0.034482758620689655
+useless,{'useless': 1},1,0.034482758620689655
+answer,{'answer': 2},2,0.06896551724137931
+attract,{'attracting': 1},1,0.034482758620689655
+clue,{'clue': 1},1,0.034482758620689655
+deciph,{'decipher': 1},1,0.034482758620689655
+describ,{'describe': 1},1,0.034482758620689655
+determin,{'determine': 1},1,0.034482758620689655
+distract,{'distracted': 1},1,0.034482758620689655
+explain,{'explain': 1},1,0.034482758620689655
+find,{'find': 3},3,0.10344827586206896
+form,{'form': 1},1,0.034482758620689655
+grasp,{'grasp': 1},1,0.034482758620689655
+help,{'help': 2},2,0.06896551724137931
+impact,{'impact': 1},1,0.034482758620689655
+infer,{'infer': 1},1,0.034482758620689655
+iter,{'iterate': 1},1,0.034482758620689655
+make,{'make': 1},1,0.034482758620689655
+makesens,{'makesense': 3},3,0.10344827586206896
+process,{'process': 2},2,0.06896551724137931
+rank,{'rank': 1},1,0.034482758620689655
+recogn,{'recognize': 1},1,0.034482758620689655
+relat,{'relate': 1},1,0.034482758620689655
+show,"{'show': 3, 'shows': 1}",4,0.13793103448275862
+summar,{'summarize': 2},2,0.06896551724137931
+support,{'support': 1},1,0.034482758620689655
+tell,{'tells': 1},1,0.034482758620689655
+want,{'want': 1},1,0.034482758620689655
+consis,{'consisely': 1},1,0.034482758620689655
+easili,{'easily': 9},9,0.3103448275862069
+effort,{'effort': 1},1,0.034482758620689655
+exact,{'exactly': 2},2,0.06896551724137931
+explor,{'explore': 1},1,0.034482758620689655
+glanc,{'glance': 1},1,0.034482758620689655
+hard,{'hard': 1},1,0.034482758620689655
+immedi,{'immediately': 1},1,0.034482758620689655
+layout,{'layout': 1},1,0.034482758620689655
+long,{'long': 1},1,0.034482758620689655
+one,{'one': 1},1,0.034482758620689655
+paragraph,{'paragraph': 1},1,0.034482758620689655
+quick,{'quickly': 3},3,0.10344827586206896
+rapid,{'rapidly': 1},1,0.034482758620689655
+salient,{'saliently': 1},1,0.034482758620689655
+second,{'seconds': 1},1,0.034482758620689655
+sentenc,{'sentence': 1},1,0.034482758620689655
+time,"{'time': 3, 'timely': 1}",4,0.13793103448275862
+timespan,{'timespan': 1},1,0.034482758620689655

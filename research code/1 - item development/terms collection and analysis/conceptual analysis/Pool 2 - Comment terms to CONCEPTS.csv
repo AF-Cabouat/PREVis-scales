@@ -1,0 +1,85 @@
+﻿index,CONCEPT,Tokens_originals,Sources_unique_list,Sources_unique_list_count
+readabl,READ,"{'readable': 1, 'readability': 1}","['https://dx.doi.org/10.1109/INFVIS.2002.1173148', 'https://dx.doi.org/10.1109/TVCG.2013.191', 'https://dx.doi.org/10.1109/VAST.2009.5332595']",3
+visibl,VIEW,"{'visible': 1, 'visibility': 1}","['https://dx.doi.org/10.1109/INFVIS.2002.1173148', 'https://dx.doi.org/10.1109/TVCG.2013.191', 'https://dx.doi.org/10.1109/TVCG.2022.3209480']",3
+legibl,READ,{'legible': 1},"['https://dx.doi.org/10.1109/TVCG.2009.176', 'https://dx.doi.org/10.1109/TVCG.2013.191']",2
+simpl,COMPLEX,{'simple': 1},"['https://dx.doi.org/10.1109/TVCG.2012.189', 'https://dx.doi.org/10.1109/TVCG.2014.2346420', 'https://dx.doi.org/10.1109/TVCG.2020.2968911', 'https://dx.doi.org/10.1109/VAST.2009.5332595']",4
+better,GOOD,{'better': 1},['https://dx.doi.org/10.1109/TVCG.2011.186'],1
+suitabl,SUPPORT,{'suitable': 1},['https://dx.doi.org/10.1109/TVCG.2011.186'],1
+difficult,EASINESS,{'difficult': 1},"['https://dx.doi.org/10.1109/TVCG.2013.151', 'https://dx.doi.org/10.1109/TVCG.2013.233', 'https://dx.doi.org/10.1109/TVCG.2018.2865192', 'https://dx.doi.org/10.1109/TVCG.2020.3030358', 'https://dx.doi.org/10.1109/TVCG.2011.186']",5
+follow,GUIDANCE,{'follow': 1},['https://dx.doi.org/10.1109/TVCG.2011.186'],1
+lost,GUIDANCE,{'lost': 1},"['https://dx.doi.org/10.1109/TVCG.2011.186', 'https://dx.doi.org/10.1109/TVCG.2013.76']",2
+deciph,UNDERSTAND,{'decipher': 1},['https://dx.doi.org/10.1109/TVCG.2011.160'],1
+confus,CLARITY,{'confusing': 1},"['https://dx.doi.org/10.1109/TVCG.2018.2835485', 'https://dx.doi.org/10.1109/TVCG.2011.160', 'https://dx.doi.org/10.1109/TVCG.2014.2346420', 'https://dx.doi.org/10.1109/TVCG.2022.3209480', 'https://dx.doi.org/10.1109/TVCG.2013.76']",5
+rich,RICH,{'rich': 1},['https://dx.doi.org/10.1109/TVCG.2012.255'],1
+usabl,SUPPORT,{'usable': 1},['https://dx.doi.org/10.1109/TVCG.2012.255'],1
+comprehens,UNDERSTAND,{'comprehensibly': 1},['https://dx.doi.org/10.1109/TVCG.2012.255'],1
+easili,EASINESS,{'easily': 1},"['https://dx.doi.org/10.1109/TVCG.2020.3030388', 'https://dx.doi.org/10.1109/TVCG.2012.255', 'https://dx.doi.org/10.1109/TVCG.2021.3114822']",3
+simplic,COMPLEX,{'simplicity': 1},['https://dx.doi.org/10.1109/TVCG.2012.255'],1
+speed,TIME,{'speed': 1},['https://dx.doi.org/10.1109/TVCG.2012.255'],1
+understand,UNDERSTAND,"{'understandable': 1, 'understand': 1}","['https://dx.doi.org/10.1109/TVCG.2022.3209477', 'https://dx.doi.org/10.1109/TVCG.2022.3209484', 'https://dx.doi.org/10.1109/TVCG.2019.2934784', 'https://dx.doi.org/10.1109/TVCG.2012.189', 'https://dx.doi.org/10.1109/TVCG.2012.255', 'https://dx.doi.org/10.1109/TVCG.2013.191', 'https://dx.doi.org/10.1109/TVCG.2021.3114822', 'https://dx.doi.org/10.1109/TVCG.2020.3030358', 'https://dx.doi.org/10.1109/TVCG.2017.2744118', 'https://dx.doi.org/10.1109/TVCG.2019.2934337']",10
+meaning,RELEVANT,{'meaningful': 1},"['https://dx.doi.org/10.1109/TVCG.2012.189', 'https://dx.doi.org/10.1109/TVCG.2019.2934784']",2
+view,VIEW,{'view': 1},['https://dx.doi.org/10.1109/TVCG.2012.189'],1
+help,SUPPORT,{'helpful': 1},"['https://dx.doi.org/10.1109/TVCG.2012.189', 'https://dx.doi.org/10.1109/TVCG.2019.2934557']",2
+easi,EASINESS,{'easy': 1},"['https://dx.doi.org/10.1109/TVCG.2019.2934557', 'https://dx.doi.org/10.1109/TVCG.2018.2835485', 'https://dx.doi.org/10.1109/TVCG.2022.3209484', 'https://dx.doi.org/10.1109/TVCG.2019.2934784', 'https://dx.doi.org/10.1109/TVCG.2013.233', 'https://dx.doi.org/10.1109/TVCG.2013.191', 'https://dx.doi.org/10.1109/TVCG.2022.3209480', 'https://dx.doi.org/10.1109/TVCG.2018.2865192', 'https://dx.doi.org/10.1109/TVCG.2020.3030358', 'https://dx.doi.org/10.1109/TVCG.2015.2467872']",10
+see,VIEW,{'see': 1},"['https://dx.doi.org/10.1109/TVCG.2013.233', 'https://dx.doi.org/10.1109/TVCG.2013.191', 'https://dx.doi.org/10.1109/TVCG.2021.3114822', 'https://dx.doi.org/10.1109/TVCG.2022.3209480']",4
+read,READ,{'read': 1},['https://dx.doi.org/10.1109/TVCG.2013.191'],1
+eas,EASINESS,{'ease': 1},"['https://dx.doi.org/10.1109/TVCG.2017.2745941', 'https://dx.doi.org/10.1109/TVCG.2013.191']",2
+clean,CLUTTER,{'clean': 1},['https://dx.doi.org/10.1109/TVCG.2013.191'],1
+bold,VIS TEXT,{'bold': 1},['https://dx.doi.org/10.1109/TVCG.2013.191'],1
+untidi,CLARITY,{'untidy': 1},['https://dx.doi.org/10.1109/TVCG.2013.191'],1
+clutter,CLUTTER,"{'cluttered': 1, 'clutter': 1}","['https://dx.doi.org/10.1109/TVCG.2021.3068337', 'https://dx.doi.org/10.1109/TVCG.2013.233', 'https://dx.doi.org/10.1109/TVCG.2013.191', 'https://dx.doi.org/10.1109/TVCG.2014.2337337']",4
+use,SUPPORT,"{'use': 1, 'useful': 1}","['https://dx.doi.org/10.1109/TVCG.2018.2835485', 'https://dx.doi.org/10.1109/TVCG.2013.233', 'https://dx.doi.org/10.1109/TVCG.2021.3114822']",3
+occlud,VIEW,{'occluded': 1},['https://dx.doi.org/10.1109/TVCG.2014.2346420'],1
+recogn,QUERY,{'recognize': 1},"['https://dx.doi.org/10.1109/TVCG.2017.2744118', 'https://dx.doi.org/10.1109/TVCG.2014.2346420']",2
+guid,GUIDANCE,{'guide': 1},['https://dx.doi.org/10.1109/TVCG.2014.2346420'],1
+intuit,INTUITIVE,"{'intuitive': 1, 'intuitively': 1}","['https://dx.doi.org/10.1109/TVCG.2018.2835485', 'https://dx.doi.org/10.1109/TVCG.2022.3209484', 'https://dx.doi.org/10.1109/TVCG.2014.2346420', 'https://dx.doi.org/10.1109/TVCG.2018.2865192', 'https://dx.doi.org/10.1109/TVCG.2020.3030388']",5
+strong,SUPPORT,{'strong': 1},['https://dx.doi.org/10.1109/TVCG.2015.2467872'],1
+judg,QUERY,{'judge': 1},['https://dx.doi.org/10.1109/TVCG.2017.2745941'],1
+clear,CLARITY,{'clear': 1},"['https://dx.doi.org/10.1109/TVCG.2017.2745941', 'https://dx.doi.org/10.1109/TVCG.2020.3030388', 'https://dx.doi.org/10.1109/TVCG.2018.2865192']",3
+disorient,GUIDANCE,{'disorientating': 1},['https://dx.doi.org/10.1109/TVCG.2017.2744118'],1
+unexpect,EXPECTATION,{'unexpected': 1},['https://dx.doi.org/10.1109/TVCG.2018.2865192'],1
+distinguish,CLARITY,{'distinguish': 1},"['https://dx.doi.org/10.1109/TVCG.2018.2865192', 'https://dx.doi.org/10.1109/TVCG.2019.2934557', 'https://dx.doi.org/10.1109/TVCG.2018.2835485']",3
+encod,ENCODINGS,{'encoding': 1},['https://dx.doi.org/10.1109/TVCG.2018.2865192'],1
+spars,CLUTTER,{'sparse': 1},['https://dx.doi.org/10.1109/TVCG.2018.2865192'],1
+overview,OVERVIEW,{'overview': 1},['https://dx.doi.org/10.1109/TVCG.2018.2864907'],1
+instant,TIME,{'instantly': 1},['https://dx.doi.org/10.1109/TVCG.2018.2864907'],1
+interpret,UNDERSTAND,"{'interpret': 1, 'interpretation': 1}","['https://dx.doi.org/10.1109/TVCG.2020.3030388', 'https://dx.doi.org/10.1109/TVCG.2022.3209477', 'https://dx.doi.org/10.1109/TVCG.2019.2934337', 'https://dx.doi.org/10.1109/TVCG.2018.2864907']",4
+hard,EASINESS,{'hard': 1},"['https://dx.doi.org/10.1109/TVCG.2022.3209480', 'https://dx.doi.org/10.1109/TVCG.2019.2934669', 'https://dx.doi.org/10.1109/TVCG.2013.76', 'https://dx.doi.org/10.1109/TVCG.2018.2864907']",4
+cognit,REASON,{'cognitive': 1},['https://dx.doi.org/10.1109/TVCG.2018.2864907'],1
+present,SHOW,{'present': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934784'],1
+perceiv,VIEW,{'perceive': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934557'],1
+code,ENCODINGS,{'coding': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934557'],1
+obvious,CLARITY,{'obvious': 1},"['https://dx.doi.org/10.1109/TVCG.2019.2934557', 'https://dx.doi.org/10.1109/TVCG.2021.3114822']",2
+effect,SUPPORT,{'effective': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934557'],1
+discern,QUERY,{'discern': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934337'],1
+unclear,CLARITY,{'unclear': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934669'],1
+mean,MEANING,{'meaning': 1},['https://dx.doi.org/10.1109/TVCG.2019.2934669'],1
+correct,ACCURATE,{'correctly': 1},['https://dx.doi.org/10.1109/TVCG.2020.3030388'],1
+spot,SEARCH,{'spot': 1},['https://dx.doi.org/10.1109/TVCG.2020.3030388'],1
+visual,VIEW,{'visualize': 1},['https://dx.doi.org/10.1109/TVCG.2020.3030358'],1
+conceptu,TAKEAWAY,{'conceptualize': 1},['https://dx.doi.org/10.1109/TVCG.2020.3030358'],1
+distract,FOCUS,{'distracting': 1},"['https://dx.doi.org/10.1109/TVCG.2021.3068337', 'https://dx.doi.org/10.1109/TVCG.2013.76']",2
+chao,CLARITY,{'chaos': 1},['https://dx.doi.org/10.1109/TVCG.2013.76'],1
+easier,EASINESS,{'easier': 1},['https://dx.doi.org/10.1109/TVCG.2014.2329308'],1
+busi,CLUTTER,{'busy': 1},['https://dx.doi.org/10.1109/TVCG.2014.2329308'],1
+messi,CLARITY,{'messy': 1},"['https://dx.doi.org/10.1109/TVCG.2021.3068337', 'https://dx.doi.org/10.1109/TVCG.2014.2329308']",2
+comfort,EASINESS,{'comfortable': 1},['https://dx.doi.org/10.1109/TVCG.2014.2329308'],1
+richer,RICH,{'richer': 1},['https://dx.doi.org/10.1109/TVCG.2014.2337337'],1
+neat,AESTHETICS,{'neat': 1},['https://dx.doi.org/10.1109/TVCG.2014.2337337'],1
+hamper,SUPPORT,{'hamper': 1},['https://dx.doi.org/10.1109/TVCG.2018.2835485'],1
+appropri,RELEVANT,{'appropriate': 1},['https://dx.doi.org/10.1109/TVCG.2018.2835485'],1
+effici,TIME,{'efficient': 1},['https://dx.doi.org/10.1109/TVCG.2018.2835485'],1
+highlight,GUIDANCE,{'highlight': 1},['https://dx.doi.org/10.1109/TVCG.2018.2835485'],1
+attract,FOCUS,{'attract': 1},['https://dx.doi.org/10.1109/TVCG.2018.2835485'],1
+attent,FOCUS,{'attention': 1},"['https://dx.doi.org/10.1109/TVCG.2018.2835485', 'https://dx.doi.org/10.1109/TVCG.2021.3114822']",2
+complex,COMPLEX,{'complex': 1},"['https://dx.doi.org/10.1109/TVCG.2020.2968911', 'https://dx.doi.org/10.1109/TVCG.2019.2906900']",2
+disorgan,CLARITY,{'disorganized': 1},['https://dx.doi.org/10.1109/TVCG.2021.3068337'],1
+unapp,AESTHETICS,{'unappealing': 1},['https://dx.doi.org/10.1109/TVCG.2021.3068337'],1
+insight,TAKEAWAY,{'insight': 1},['https://dx.doi.org/10.1109/TVCG.2021.3114822'],1
+prefer,AESTHETICS,{'prefer': 1},['https://dx.doi.org/10.1109/TVCG.2021.3114822'],1
+relev,RELEVANT,{'relevant': 1},['https://dx.doi.org/10.1109/TVCG.2021.3114822'],1
+show,SHOW,{'show': 1},"['https://dx.doi.org/10.1109/TVCG.2021.3114822', 'https://dx.doi.org/10.1109/TVCG.2022.3209480']",2
+balanc,BALANCE,{'balance': 1},"['https://dx.doi.org/10.1109/TVCG.2022.3209475', 'https://dx.doi.org/10.1109/TVCG.2021.3114775']",2
+occlus,VIEW,{'occlusion': 1},['https://dx.doi.org/10.1109/TVCG.2022.3209475'],1
+crowd,CLUTTER,{'crowded': 1},['https://dx.doi.org/10.1109/TVCG.2022.3209480'],1
+conveni,SUPPORT,{'convenient': 1},['https://dx.doi.org/10.1109/TVCG.2022.3209480'],1

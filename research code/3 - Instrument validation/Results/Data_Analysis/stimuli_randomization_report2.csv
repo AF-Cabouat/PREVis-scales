@@ -1,0 +1,7 @@
+stimulus A,stimulus B,stimulus C,count
+3d,1st,2d,42
+2d,3d,1st,30
+2d,1st,3d,23
+1st,2d,3d,19
+3d,2d,1st,19
+1st,3d,2d,15

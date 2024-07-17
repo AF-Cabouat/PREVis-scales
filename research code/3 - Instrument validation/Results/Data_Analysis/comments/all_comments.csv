@@ -1,0 +1,51 @@
+seed,A_comments,B_comments,C_comments
+168101042569,That's a clear visualization.,"The left part is fine and clear, the right part is too condensed.",I cannot understand if some lines continue after a dot (person) or stop. This can lead to misleading results.
+45247857963,"It's easy to understand, though not necessarily well organized or easy to browse. When I had to check if Grace and Monica had exchanged secrets, I spent a few seconds looking for Monica. I am by no means an expert though.",This makes my brain scream. It's crowded and impossible to read. Having to pull data from this would be hard work.,"This one basically made me tap out. This is the sort of stuff you give an employee you wanna get rid of at a PIP, I suppose. Felt smart when I managed to notice that Taylor and Alice didn't share secrets though. I think, at least. This one's horrifyingly bad. Can't imagine most people would disagree."
+26379028454,Finally!,"The lines are too densely packed to easily make judgements in some cases, eg. How many connections ssomeone like Rachel has.","The lines need to be unambiguously bbypassing nodes, or connecting to them. Alice for example has a thick line passsing through her node. Is it a cconnection, or just  passing ""by"" her?"
+71484869893,"With the extra space, it could be helpful to add the number of connections each node has on the node itself",,This diagram could be greatly improved by rearranging nodes; the problem is not with the type of graph itself.
+84480827166,"This time, the visualization was so much more simple to understand!","I think the visualization seams fine to read, not messy, but just a little bit crowded.","This one was very messy, compared to the others."
+196822301272,"the vis is most comprehensive and clear in who-exchange-with.who secrets, more centered dots making a person whispering excessively, it the most clear vis graph by far, however, the straightline can be replaced with curves to avoid confusion in Eleanor, alice, leonard and Nathan, although it's already comprehensive that eleanor connecting to alice only, and leonard communicates to Nathan only","this vis/graph was much much better than the previous, more organized, clean, more comprehensive than previous one with clusters of nodes.","this vis is a bit messy, dots having different colors are mixed, challenging to find the wanted information although it was clear and comprehensive what vis communicated, it's just hard to explore the information. Hoping more structured vis, clustered by color and connecting lines could be curves, straight lines from taylor, water, and alice may be misinterpreted as direct connection between taylor and alice although it is not"
+160952659796,"The layout is very clear and well formatted. The low complexity of interactions is, of course, helping.","The visualization is quite clear, but can get a little bit messy when the connection a thicker (eg: Leonard - Walter, overlapping a bit Monica), or with many nodes and connection (eg: Rachel in between of many connections).","This forest is pretty hard to read, with several overlaps"
+55753433481,"Season 1 is less crowded than season 2 and 3, this graph is way better to look at and to work with.",this is slightly better and easier to read than season 3,"The graph is a bit messy, but the dots give you a clearer indication on where to look and find the activity that way who connected the most and with who."
+110352545132,This visualisation is much better than the previous one.,"Once again, using more colors would help.","The visualization is unreadable, because all connections have the same color. Using different colors would surely made it more clear."
+165850282516,I do not understand how Diana and Charlie relate to Leonard.,"Lines are overlapping, still overcrowded but much better that visualization 2","Very crowded, I understand the representation but can not see the line clearly as they overlap"
+113530059245,"This was very clean not as crowded
+ like the first visualization",this was clean for the most part and only crowded in one part but overall readable,"The data on the visualization is not that messy and not difficult for me to read data on it
+"
+122883667271,"The visualization was easier to read this time
+","The visuals are a bit confusing because of the different colors so I was not sure which one was season 2 
+","The visualization is a bit messy and confusing
+"
+155095541778,"I think it would help if the characters that are the ""core"" (Alice and Leonard) of this visualization were more prominent.","The lines in the right node make it impossible to quantify the secrets. Could be more for Ursula than Monica or vice versa but it's impossible to discern. The whole section is too crowded and intricate, but the rest is not bad at all.",It is very much crowded and the line from Alice to Taylor could overlapping with a line from Walter to Taylor.
+96632369096,"The visualization lacks dynamics and outliers which would make it more interesting to ask about as alternative questions.
+","More characters should be put to use for various questioning.
+","The significance of the thickness in the connection lines is unknown to me.
+"
+178988751779,WELL PRESENTED DIAGRAM AND EASY TO READ,,
+48534197366,Much clearer and easier to follow,It is a simple enough diagram to understand,Certainly more crowded and unclear
+6664303897,"out of the three this one was the most clear 
+",,"The lines on the diagram is clear but if the thinner line was d
+arcker then the task at hand would be more better "
+151499039122,This one is pretty clear and understandable with prior knowledge of how to read/understand it. ,The right side of the visualization is a bit crowded and might confuse people. ,It's messy and if I was seeing it for the first time it wouldn't be easy to extract info from it. 
+213436625341,those familiar with social networks or related type of content might find it easier to interpret this type of visualization,"Some ""don't's"" in the quesion framing  could create mistakes in the ratings with the agree-disagree scale","
+"
+172505022893,This representation is the best from far !!,,
+37209589168,I suddenly got worried about whether indirect whispers were actually direct whispers in this visualization ... and the cross in the middle was slightly confusing ...Why put Diana across from Charlie in such a way as to intersect with the Alice-Leonard line?,"Why are there two lines between Violet and Walter? I can sort of understand the Walter Sophie Quincy thing, but  ... oh, wait, perhaps the Violet thing is the same BUT the fact that there are two lines between Violet and Taylor is obscured by the label. So, yeah, maybe I do understand it - it's just too small.
+","It's hard to tease out the activity of the more active whisperers, though it seems always possible to follow them if you make an effort. If the whole thing were larger it would be easier."
+162231603111,Way better in this form,Only the corner ends are a bit messy but it is readable (Visually) ,To Cluttered 
+112735934140,The cleared example of visualization yet. Clearly laid out to convey the data on a simple and clear manner. The questions still for and showcase that the survey needs to engage to confirm the clarity of the visualizing techniques.,The visualization is more clearly layout then the previous example used. The questions are well layout to confirm intent and meaning for the visuals and what the survey is intended for.,"The visualization is a very messy and confusing and needs a bit of focused work before finding the information required to answer the questions. The rating questions are clear in what is being requested. The questions are well layout in respect towards the visualization being used and what specific data is needed to be conveyed for the user.
+"
+177126480936,,"Too many connections between Leonard's friends in the visualisation make it a bit crowded, but that is often the case for these kinds of network representations.",
+138381221571,,This one has been the easiest for me to see the data trends in so far.,"While the data is there if you spend some time looking at it, I find it a distracting and confusing way to see the data represented. Having to trace with a finger / mouse pointer etc rather than just being able to see what I want to see."
+69253389710,,"Wright up says first season, questions refer to season 2?","You refer to first season, in the wright up but season 3 in the questions..."
+136216531257,,"Some parts are confusing: Alice, for example, is connected to 7 people on the left. I don't know if that means Diana is connected to those people as well, or just to Alice.","Some connections are unclear, e.g. there is a line from Alice to Walter to Taylor. I don't know if this means Alice has a connection to Taylor. Overall, it's very cluttered."
+49059400266,,"I can easily understand the left part of the visualization, its separeted from the others, you can easily retrieve and identify data, but the right side its super crowded that you barely can see anything",
+133923348979,,"my rating questions that I just answered are not correct. I have never click on that. For example, I said that I found this visualization crowded and quite messy. ","Again, this answers are not the one that I chose. I find this visualization crowded and messy"
+180574313810,,Having the Names of the Characters be more spread out would improve the visualization,
+125631530338,,,The visualization is too crowded and the names are too close from one another
+128889870230,,,"
+"
+103027304451,,,"
+"
+100549813061,,,Some parts of the visualization is difficult to read
+188678630831,,,"In that case, if the image/diagram were slightly larger it might be easier to read."

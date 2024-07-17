@@ -1,0 +1,441 @@
+---
+title: "Exploratory Factor Analysis"
+output: html_document
+date: "2024-01-09"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#set working directory
+
+#set working directory
+my_dir <- "your_data_directory" #eg: "absolute_path_to/Supplementary-material-folder/2 - Scale development/"
+knitr::opts_knit$set(root.dir = paste(my_dir, "Results/Data_Analysis", sep=""))
+
+```
+
+```{r libraries}
+library(png)
+library(ltm)
+library(psych)
+library(misty)
+library(mice) 
+library(mifa)
+library(EFA.dimensions)
+library(imager)
+library(corrplot)
+library(knitr)
+library(kableExtra)
+library(xtable)
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(lattice) 
+```
+
+```{r functions}
+### FUNCTIONS ###
+
+# Applicability of EFA
+
+## Bartlett test of sphericity - from TH
+bartlettTest <- function(num,corrMatrix,data){
+  bart <- cortest.bartlett(corrMatrix, n = nrow(data))
+  if(bart[2]>0.05) cat("WARNING the p value is above 0.05") else cat("The p value is below 0.05. We are good to continue.")
+  cat("\n\n")
+  cat(paste("p-value from Bartlett's test of sphericity:", bart$p.value))
+  cat("\n\n")
+  bart
+  return(bart)
+}
+
+##KMO to complement Bartlett - from TH
+KMOTest <- function(num,corrMatrix){
+  kmo <- KMO(corrMatrix)
+  cat(paste("The overall measure of sampling adequacy is: ",kmo[1]))
+  cat("\n\n")
+  if(kmo[1]<.7) cat("WARNING the sampling adequacy has dropped below 0.7") else cat("The sampling adequacy is above 0.7. We are generally good.")
+  cat("\n\n")
+  return(kmo)
+}
+
+## Missing data decision tree (Mirzaei et al., 2022)
+missingTest <- function(na_percent, mcar_pvalue){
+  if (na_percent<5 & mcar_pvalue<=.05){
+      cat("Data is MCAR and less than 5% missing data, which is negligible. We are good to continue.")
+  } else if (na_percent<5 & mcar_pvalue>.05){
+      cat("Data is NOT MCAR but less than 5% missing data, which is negligible. We are good to continue.")
+  } else if(na_percent>=5 & mcar_pvalue>.05) {
+      cat("WARNING missing data is not negligible (> 5%) AND missing data is NOT MCAR. Further investigation is needed. Above 40%, imputation methods may NOT be used safely.")
+  } else if (na_percent>=5 & na_percent<40 & mcar_pvalue<=.05){
+      cat("Data is MCAR but more than 5% missing data. Use imputation / likelihood methods.")
+  }  else {
+      cat("40% or more missing data and / or something is wrong.")
+}}
+
+
+#EFA#
+
+#Number of Factors to Retain - from TH
+parallelAnalysis <- function(num, corrMatrix, data){
+  pdf(paste(paste("generatedPlots-EFA/ScreePlot-",stimuli_letters[[num]],sep=""),'.pdf'), width=8, height=4)
+  parallel <- fa.parallel(corrMatrix, n.obs=nrow(data), fa="fa", n.iter=100, main="Scree plots with parallel analysis")
+  dev.off() 
+  cat("\n\n")
+}
+
+### EFA
+
+#### Model of Factor Analysis
+
+#### Estimation Method
+#### two estimation methods: ML and PA - Statistical simulations have found that PA outperforms ML when the relationships between measured variables and factors are relatively weak (≤.40), sample size is relatively small (≤300), multivariate normality is violated, or when the number of factors underlying the measured variables is misspecified
+
+EFA <- function(num, factor, rotation, corrMatrix, d){
+  efa <- fa(corrMatrix, n.obs=nrow(d), nfactors = factor, rotate = rotation, fm = "pa")
+  print(efa,sort=TRUE)
+  #fa.diagram(efa,cut=.4,digits=2) #I don't fint this diagram particularly useful
+  return(efa)
+}
+
+```
+
+```{r run}
+
+stimuli_letters <- list("A","B","C","D","E","F","Agg")
+
+# Create folders if they don't exist
+
+if (!dir.exists("generatedData-EFA/")) {
+  dir.create("generatedData-EFA/", recursive = TRUE)
+}
+
+if (!dir.exists("generatedData-EFA/correlations/")) {
+  dir.create("generatedData-EFA/correlations/", recursive = TRUE)
+}
+
+if (!dir.exists("generatedPlots-EFA/")) {
+  dir.create("generatedPlots-EFA/", recursive = TRUE)
+}
+
+if (!dir.exists("generatedPlots-EFA/correlationsPlots_variations/")) {
+  dir.create("generatedPlots-EFA/correlationsPlots_variations/", recursive = TRUE)
+}
+
+participantResponseFiles <- list.files(path= "./data",pattern = "\\.csv$")
+
+# Remove the 8th file ("ratings-stimulus.csv", used in CFA only)
+participantResponseFiles <- participantResponseFiles[-8]
+
+print(participantResponseFiles)
+for (file in participantResponseFiles) {
+  print(file)
+}
+
+analyze_stimuli <-function(num){
+  #load one file
+  my_data <- read.csv(paste("data/",participantResponseFiles[[num]],sep=""), encoding="UTF-8")
+  data <- subset(my_data, select = -c(seed))
+
+  #Descriptive statistics - Check minimum/maximum values per item, and screen for missing values
+  data_desc <- describe(data)
+  print(data_desc)
+  response.frequencies(data)
+  nb_obs <- nrow(data)
+  nb_answers <- nb_obs*29 #29 rating items in our questionnaire
+
+  #Normality of data
+
+  #Univariate normality
+  ## Shapiro Wilk’s test (P-values < 0.05 indicate not normal)
+  summary_shapiro <- do.call(rbind, lapply(data, function(x) shapiro.test(x)[c("statistic", "p.value")]))
+  # Individual stimuli data are expected to not be normal (which doesn't matter for EFA with our extraction method called Principal Axis Factoring, or PAF)
+  if (stimuli_letters[[num]]=="Agg"){
+   print(summary_shapiro) 
+  }
+
+  # Multivariate normality
+  #To say the data are multivariate normal: • z-kurtosis < 5 (Bentler, 2006) and the P-value should be ≥ 0.05. The plot should also form a straight line (Arifin, 2015).
+  ##Run Mardia’s multivariate normality test
+  mardia(data)
+  mardia_analysis <- mardia(data)
+  cat(paste('Kurtosis:', mardia_analysis$kurtosis, '\n'))
+  cat(paste('Kurtosis p-value:', mardia_analysis$p.kurt, '\n'))
+  cat(paste('Skew:', mardia_analysis$skew, '\n'))
+  cat(paste('Skew p-value:', mardia_analysis$skew, '\n'))
+  cat("\n\n")
+
+  cat("\n## Missing data\n")
+  cat("\n")
+  cat("### Little's test for MCAR\n")
+  #test MCAR
+  MCAR <- na.test(data)
+  mcar_p <- MCAR[["result"]][["pval"]]
+  cat(paste("Little's test p-value is:", mcar_p,"\n\n"))
+
+  
+  cat("### Amount of missing data\n")
+  na_amount <- sum(is.na(data))/nb_answers*100
+  cat(paste(as.numeric(na_amount)), "% of data is missing\n\n")
+  
+  missingTest(na_amount, mcar_p)
+
+  cat("### Multiple Imputation for missing values\n")
+  cat("We run 5 iterations \n")
+  #run MICE and generate covariance matrix with with mifa package
+  mi <- mifa(
+    data      = data, 
+    n_pc      = 1:29, #factors estimates
+    ci        = "fieller", #confidence interval method
+    print     = FALSE,
+    m = 5 #number of MICE iterations
+  )
+  cat("\n\n")
+
+  cat("\n### Correlation from MICE covariance matrix\n")
+  corr_MICE <- cov2cor(mi$cov_combined)
+
+  # as csv
+  write.csv(corr_MICE,file=paste0("generatedData-EFA/correlations/corr", stimuli_letters[[num]],"-MICE.csv"))
+  # as pdf
+  pdf(sprintf('generatedPlots-EFA/corr%s-MICE.pdf', stimuli_letters[[num]]), height=15, width=15)
+  corrplot(corr_MICE,
+          method="color",
+          tl.srt = 30, #rotate text labels, 
+          tl.col="black", tl.cex = 1, # Text label color and size
+          addCoef.col = "black", number.cex = 1, # Add coefficient of correlation and size
+          cl.cex = 1.5 #color legend font size
+          )
+  dev.off()
+
+  pdf(sprintf( 'generatedPlots-EFA/correlationsPlots_variations/corr%s-MICE_AOE.pdf', stimuli_letters[[num]]), height=30, width=30)
+  corrplot(corr_MICE,
+          method="color",
+          order="AOE", 
+          tl.srt = 30, #rotate text labels
+          tl.col="black", tl.cex = 1.5, # Text label color and size
+          addCoef.col = "black", number.cex = 1.5, # Add coefficient of correlation and size
+          cl.cex = 1.5 #color legend font size
+          )
+  dev.off()
+
+  pdf(sprintf( 'generatedPlots-EFA/correlationsPlots_variations/corr%s-MICE_hclust.pdf', stimuli_letters[[num]]), height=30, width=30)
+  corrplot(corr_MICE,
+          method="color",
+          order="hclust",
+          tl.srt = 30, #rotate text labels
+          tl.col="black", tl.cex = 1.5, # Text label color and size
+          addCoef.col = "black", number.cex = 1.5, # Add coefficient of correlation and size
+          cl.cex = 1.5 #color legend font size
+          )
+  dev.off()
+          # tl.srt=45, tl.pos = 'd' #Text label rotation
+          # Combine with significance
+          #p.mat = p.mat, sig.level = 0.01, insig = "blank", 
+          # hide correlation coefficient on the principal diagonal
+          #diag=FALSE 
+
+  #corrplot(corr_MICE, type="upper", order="hclust", col=brewer.pal(n=8, name="PuOr"))
+
+  # Covariance matrix without MICE
+  corr_reg <- cor(data)
+  
+  # as csv
+  write.csv(corr_reg,file=paste0("generatedData-EFA/correlations/corr", stimuli_letters[[num]],"-noMICE.csv"))
+  
+  #as pdf
+  pdf(sprintf( 'generatedPlots-EFA/correlationsPlots_variations/corr%s-no_MICE.pdf', stimuli_letters[[num]]), height=30, width=30)
+  corrplot(corr_reg,
+          method="color",
+          #order="hclust", 
+          tl.col="black", tl.cex = 1.5, # Text label color and size
+          addCoef.col = "black", number.cex = 1, # Add coefficient of correlation and size
+          )
+  dev.off()
+
+
+  ##CHOOSE A COVAR / CORR MATRIX
+  my_data <- data
+  covar <- mi$cov_combined
+  corrM <- corr_MICE
+  
+  cat("\n### Cronbach alpha from original data\n")
+  alpha_values <- psych::alpha(data)
+  summary(alpha_values)
+  alpha_values
+
+  cat("\n### Cronbach alpha from correlation matrix\n")
+  alpha_values <- psych::alpha(corrM, n.obs = nb_obs)
+  summary(alpha_values)
+  alpha_values
+  
+  cat("\n### Bartlett’s test of sphericity\n")
+  bartlettTest(num, corrM, data)
+  cat("\n\n")
+
+  cat("\n### KMO\n")
+  KMOTest(num,corrM)
+  cat("\n\n")
+
+  cat("\n## Scree Plot and Parallel Analysis\n")
+  parallelAnalysis(num,corrM, data)
+  cat("\n\n")
+
+  # Exploratory Analyses below here 
+  ## in psychology, factors are correlated so oblique rotations are prefered 
+  ## cf Dr. Erin M. Buchanan in Structural Equation Modeling 2020 https://www.youtube.com/watch?v=EKpYh7lsOf8&t=1860s
+
+  cat("\n## Exploratory Factor Analysis - 1 Factor - No Rotation\n")
+  efa1 <- EFA(num, 1, "none", corrM, data)
+  cat("\n\n")
+
+
+  cat("## Exploratory Factor Analysis - 2 Factors - Promax Rotation (Oblique rotation, allows factors to be correlated)\n")
+  efa2 <- EFA(num, 2, "promax", corrM, data)
+  cat("\n\n")
+
+  cat("## Exploratory Factor Analysis - 3 Factors - Promax Rotation (Oblique rotation, allows factors to be correlated)\n")
+  efa3 <- EFA(num, 3, "promax",corrM, data)
+  cat("\n\n")
+  
+  cat("## Exploratory Factor Analysis - 4 Factors - Promax Rotation (Oblique rotation, allows factors to be correlated)\n")
+  efa4 <- EFA(num, 4, "promax",corrM, data)
+  cat("\n\n")
+  
+  efas <- list(efa1, efa2, efa3, efa4)
+  
+  # if data is normal when looking at all stimuli aggregated data, we should also try efa with Maximum Likelihood Estimation (ml) method, which yields better results but requires normality of data
+  if (stimuli_letters[[num]]=="Agg"){
+    print(summary_shapiro) 
+    
+    cat("## Exploratory Factor Analysis - 3 Factors Maximum Likelihood method\n")
+    efa3ML <- fa(corrM, n.obs=nrow(data), nfactors = 3, rotate = "promax", fm = "ml")
+    efas <- append(efas, list(efa3ML))
+    
+    cat("## Exploratory Factor Analysis - 4 Factors Maximum Likelihood method\n")
+    efa4ML <- fa(corrM, n.obs=nrow(data), nfactors = 4, rotate = "promax", fm = "ml")
+    efas <- append(efas, list(efa4ML))
+    
+    cat("## Exploratory Factor Analysis - 5 Factors Principal Axis method\n")
+    efa5 <- EFA(num, 5, "promax",corrM, data)
+    efas <- append(efas, list(efa5))
+    
+    cat("## Exploratory Factor Analysis - 5 Factors Maximum Likelihood method\n")
+    efa5ML <- fa(corrM, n.obs=nrow(data), nfactors = 5, rotate = "promax", fm = "ml")
+    efas <- append(efas, list(efa5ML))
+    
+    cat("\n\n")}
+
+  return(efas)
+  
+}
+
+stimuliCount <- length(participantResponseFiles)
+#For debugging we can set the stimuliCount to whatever we want
+#stimuliCount <- 1
+
+# we will store all dfs
+dfs <- NULL
+
+for (i in 1:stimuliCount){
+  stimulus_name <- stimuli_letters[[i]]
+  
+  # Create the export folder if it doesn't exist
+  folder_path <- paste("generatedData-EFA/", stimulus_name, sep = "")
+  if (!dir.exists(folder_path)) {
+    dir.create(folder_path, recursive = TRUE)
+  }
+  
+  cat("\n\n")
+  cat(paste(paste("#########################################\n## Stimuli ",i, ' (',stimuli_letters[[i]]),")\n", sep=''))
+  efas <- analyze_stimuli(i) #we want to create a big table with all the factor loadings so we'll save the efa results here
+  efaCount <- length(efas)
+  for (n in 1:efaCount){
+    
+    efa <- efas[[n]]
+    method_name = toupper(efa$fm)
+    if (n>4){#then it's one of the additional efa with ML for the Agg dataset
+      nb_f <- efa$factors
+    } else {
+      nb_f <- n
+    }
+    
+    #Export loadings file
+    df <- as.data.frame(unclass(efa$loadings))
+    df <- tibble::rownames_to_column(df, "terms")
+    
+    file_name <- paste("generatedData-EFA/", stimulus_name, "/", method_name, "1 Stimuli ", nb_f, " factors - ", stimulus_name, ".csv", sep = "")
+    write.table(df,file_name, row.names=FALSE, sep=',')
+    
+    #Export weights file
+    weights_df <- as.data.frame(unclass(efa$weights))
+    weights_df <- tibble::rownames_to_column(weights_df, "terms")
+    
+    file_name <- paste("generatedData-EFA/", stimulus_name, "/Weights - ", method_name, "1 Stimuli ", nb_f, " factors - ", stimulus_name, ".csv", sep = "")
+    write.table(weights_df,file_name, row.names=FALSE, sep=',')
+
+  }
+}
+```
+```{r load one file, include=FALSE}
+
+my_data <- read.csv(paste("data/",participantResponseFiles[[7]],sep=""), encoding="UTF-8")
+data <- subset(my_data, select = -c(seed)) 
+mi <- mifa(
+    data      = data, 
+    n_pc      = 1:29, #factors estimates
+    ci        = "fieller", #confidence interval method
+    print     = FALSE,
+    m = 5 #number of MICE iterations
+)
+cat("\n\n")
+
+cat("\n### Correlation from MICE covariance matrix\n")
+corr_MICE <- cov2cor(mi$cov_combined)
+corrM <- corr_MICE
+```
+
+```{r run one EFA, include=FALSE}
+efa5 <- fa(corrM, nfactors = 4, rotate = "promax", fm = "ml", oblique.scores = TRUE)
+
+
+efa <- (unclass(efa5))
+
+dimnames_list <- attr(efa$loadings, "dimnames") # Extract dimension names of loadings object
+rows <- data.frame(Item = dimnames_list[[1]])
+columns <- data.frame(ML_Factor = dimnames_list[[2]])
+loadings_df <- data.frame(Item = rows$Item, stringsAsFactors = FALSE) # Create an empty data frame to store the data
+
+# Loop through columns to fill the data frame
+for (j in seq_along(columns$ML_Factor)) {
+  loadings_df <- cbind(loadings_df, efa$loadings[, j])
+}
+
+# Rename the columns in the new data frame
+colnames(loadings_df) <- c("Item", columns$ML_Factor)
+
+# Print or use the resulting data frame
+print(loadings_df)
+
+
+
+
+
+# this_data <- subset(ratings.7, select = -c(seed))
+# mi <- mifa(
+#     data      = this_data, 
+#     n_pc      = 1:29, #factors estimates
+#     ci        = "fieller", #confidence interval method
+#     print     = FALSE,
+#     m = 5 #number of MICE iterations
+# )
+# 
+# covar <- mi$cov_combined
+# corr_MICE <- cov2cor(mi$cov_combined)
+# 
+# bart <- cortest.bartlett(corr_MICE, n = nrow(this_data))
+# bart
+
+```
+

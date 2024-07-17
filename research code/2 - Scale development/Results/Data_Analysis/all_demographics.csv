@@ -1,0 +1,45 @@
+,A,B,C,D,E,F,Mean,Std,Sum,Freq
+Number of participants,288.0,288.0,287.0,309.0,293.0,293.0,293.0,8.27,1758.0,1.0
+Age - average,33.875,33.0,33.328,32.971,29.771,29.993,32.156,1.793,32.16201117318436,0.1097485779294653
+Age - std,12.0,11.0,11.0,11.0,9.0,8.0,10.333,1.506,10.891174081218187,0.03526734926052332
+Age - min,18.0,18.0,18.0,18.0,18.0,18.0,18.0,0.0,108.0,0.06143344709897611
+Age - max,104.0,76.0,75.0,72.0,61.0,67.0,75.833,14.878,455.0,0.25881683731513083
+Gender - Man (including Trans Male/Trans Man),190.0,186.0,175.0,205.0,143.0,137.0,172.667,27.134,1036.0,0.5893060295790671
+Gender - Non-binary (would like to give more detail),3.0,3.0,5.0,5.0,10.0,8.0,5.667,2.805,34.0,0.019340159271899887
+Gender - Rather not say,2.0,1.0,,1.0,4.0,2.0,2.0,1.225,10.0,0.005688282138794084
+Gender - Woman (including Trans Female/Trans Woman),93.0,98.0,107.0,98.0,135.0,146.0,112.833,22.176,677.0,0.3850967007963595
+Education - Doctorate degree (PhD/other),4.0,10.0,5.0,6.0,4.0,6.0,5.833,2.229,35.0,0.019908987485779295
+Education - Graduate degree (MA/MSc/MPhil/other),65.0,54.0,73.0,70.0,66.0,52.0,63.333,8.524,380.0,0.2161547212741752
+Education - High school diploma/A-levels,61.0,55.0,56.0,63.0,62.0,57.0,59.0,3.406,354.0,0.20136518771331058
+Education - No formal qualifications,5.0,4.0,,2.0,,,3.667,1.528,11.0,0.006257110352673493
+Education - Secondary education (e.g. GED/GCSE),15.0,17.0,19.0,11.0,9.0,13.0,14.0,3.742,84.0,0.04778156996587031
+Education - Technical/community college,33.0,27.0,29.0,30.0,27.0,28.0,29.0,2.28,174.0,0.09897610921501707
+Education - Undergraduate degree (BA/BSc/other),105.0,117.0,103.0,127.0,123.0,137.0,118.667,13.11,712.0,0.4050056882821388
+English_primary - False,133.0,127.0,153.0,153.0,158.0,164.0,148.0,14.642,888.0,0.5051194539249146
+English_primary - True,155.0,161.0,134.0,156.0,134.0,129.0,144.833,13.963,869.0,0.4943117178612059
+English_fluent - True,288.0,288.0,287.0,309.0,292.0,293.0,292.833,8.28,1757.0,0.9994311717861206
+colorDeficiency - No,282.0,281.0,281.0,300.0,281.0,282.0,284.5,7.609,1707.0,0.9709897610921502
+colorDeficiency - Yes,6.0,7.0,6.0,9.0,12.0,11.0,8.5,2.588,51.0,0.02901023890784983
+colorDeficiency_comment_ - I have a light form of Deuteranomaly.,1.0,,,,,,1.0,,1.0,0.0005688282138794084
+Education - Don't know / not applicable,,4.0,2.0,,1.0,,2.333,1.528,7.0,0.003981797497155859
+colorDeficiency_comment_ - I have an issue with certain strength of green and red. A form of deuteranopia. ,,1.0,,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - Mild red-green colour blindness.,,1.0,,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - red-green color blindness,,1.0,,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - I do not have color vision deficiency,,,1.0,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - I have no problem with the color rendition of my vision,,,1.0,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - My eyes work perfect. ,,,1.0,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - mild red green deficit,,,1.0,,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - I dont have any eye problems,,,,1.0,,,1.0,,1.0,0.0005688282138794084
+"colorDeficiency_comment_ - No, my vision is fine beyond the fact that I wear glasses.",,,,1.0,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - Red/Green,,,,1.0,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - Slight colour blindness - blue green ,,,,1.0,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - i do not have color vision deficiency.,,,,1.0,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - no i have a very clear vision,,,,1.0,,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - I wear reading glasses,,,,,1.0,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - None applicable ,,,,,1.0,,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - Colour Blindness (Red-Green),,,,,,1.0,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - I have deuteranopia.,,,,,,1.0,1.0,,1.0,0.0005688282138794084
+"colorDeficiency_comment_ - I really like the fact that you give the information about what color deficiency is, it's such a nice little gesture",,,,,,1.0,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - Red–green color blindness,,,,,,1.0,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - hypermetropia but i wear glasses ,,,,,,1.0,1.0,,1.0,0.0005688282138794084
+colorDeficiency_comment_ - i do not have color vision deficiency,,,,,,1.0,1.0,,1.0,0.0005688282138794084
