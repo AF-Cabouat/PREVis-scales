@@ -1,6 +1,23 @@
 # Perceived Readability Evaluation for Visualizations (PREVis) scales
 
-This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis.
+This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis scales, as published in this paper:
+
+Anne-Flore Cabouat, Tingying He, Petra Isenberg, and Tobias Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. IEEE Transactions on Visualization and Computer Graphics, 31, 2025. To appear.
+
+If you use any material from this repository please cite the paper. Here's a bibTeX entry:
+```
+@article{Cabouat:2025:PPR,
+  author      = {Anne-Flore Cabouat and Tingying He and Petra Isenberg and Tobias Isenberg},
+  title       = {{PREVis}: Perceived Readability Evaluation for Visualizations},
+  journal     = {IEEE Transactions on Visualization and Computer Graphics},
+  year        = {2025},
+  volume      = {31},
+  osf_url     = {https://osf.io/9cg8j/},
+  github_url  = {https://github.com/AF-Cabouat/PREVis-scales/},
+  url         = {https://tobias.isenberg.cc/p/Cabouat2025PPR},
+  note        = {To appear},
+}
+```
 
 ## Root files
 At the root of this folder are two PDF files:
