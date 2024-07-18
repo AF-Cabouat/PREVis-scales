@@ -41,6 +41,6 @@ To use it, please cite the paper mentioned above.
 
 A companion OSF repository was provided at the time of submission on [osf.io/9cg8j](https://osf.io/9cg8j/) for the original research project.
 
-## Process to replicate Figures 4 and 5-bottom
+## Process to replicate Figures 4 and 5-bottom from the paper
 
 To be filled in, detailed step-by-step instructions.
