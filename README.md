@@ -28,7 +28,7 @@ Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
-To use it, please cite the paper mentioned above.
+To use it, please cite the paper mentioned above and attribute the materials to the authors of the paper.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
