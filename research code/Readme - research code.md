@@ -1,6 +1,9 @@
-# Phase 2 - Scale development
+# Code related to the research project
 
-This folder contains the code related to the research work underpinning the development and validation of PREVis scales --- *see the paper.*
+This folder contains the code related to the research work underpinning the development and validation of PREVis scales.
+
+## Root files
+At the root of this folder is the PREVis publication ```PREVis_full_paper.pdf```
 
 ## Folders organization
 The folders are organized following phases of the instrument development and validation:
@@ -8,8 +11,6 @@ The folders are organized following phases of the instrument development and val
 - ``` / Phase 1 - Item development```: material related to generation and validation of candidate items --- *see **section 4** in the paper.*
 - ```/ Phase 2 - Scale development```: exploratory survey content, collected data, analysis notebooks and output tables and figures ---  *see **section 5** in the paper.*
 - ```/ Phase 3 - Scale validation```: validation survey content, collected data, analysis notebooks and outputs tables and figures ---  *see **section 6** in the paper.*
-- ```/ Main paper figures```: figures from the main paper in PDF format.
-- ```/ Using PREVis - plotting results notebook and examples```: a folder containing example figures that researchers can plot to help analyze or present PREVis data. The folder also contains a Jupyter notebook named ```plotting_PREVis.ipynb``` and two example ```.csv``` datasets to plot all PDF figures in the folder.
 
 ## Companion OSF repositories
 

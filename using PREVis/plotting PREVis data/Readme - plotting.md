@@ -1,0 +1,1 @@
+This folder contains example figures that researchers can plot to help analyze or present PREVis data. It also contains a Jupyter notebook named ```plotting_PREVis.ipynb``` and two example ```.csv``` datasets to plot all PDF figures in the folder.

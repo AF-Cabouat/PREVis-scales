@@ -2,12 +2,9 @@
 
 This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis.
 
-## Root files
-At the root of this folder is the PREVis publication (main paper with appendices: ```PREVis_full_paper.pdf```).
-
 ## Folders organization
-
-[To detail]
+- ```/ research code```: this is the folder with all the code and data for reproducible steps of our research project.
+- ```/ using PREVis```: if you want to use PREVis scales in a study, this is where we put all the resources you need. The folder contains a detailed PDF companion guide with a FAQ section and example study protocols. It also contains a folder with example data and code for visual analysis and presentation of your study results.
 
 ## CC-BY licence
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
