@@ -28,9 +28,7 @@ Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
-To use it, please cite the following source:
-
-> A.-F. Cabouat, T. He, T. Isenberg, P. Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. _IEEE Transactions on Visualization and Computer Graphics_, 2024. (Accepted).
+To use it, please cite the paper mentioned above.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
@@ -42,3 +40,7 @@ To use it, please cite the following source:
 ## Companion OSF repositories
 
 A companion OSF repository was provided at the time of submission on [osf.io/9cg8j](https://osf.io/9cg8j/) for the original research project.
+
+## Process to replicate Figures 4 and 5-bottom
+
+To be filled in, detailed step-by-step instructions.
