@@ -43,4 +43,4 @@ A companion OSF repository was provided at the time of submission on [osf.io/9cg
 
 ## Process to replicate Figures 4 and 5-bottom from the paper
 
-To be filled in, detailed step-by-step instructions.
+To be filled in, detailed step-by-step instructions. Ideally, there should only be a general prerequisites subsection with, if possible, a one-line install them all call (like with a requirements.txt in Python) and then another section that describes again essentially a one-line script call that creates the respective images from the data from the repository.
