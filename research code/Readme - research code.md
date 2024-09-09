@@ -8,15 +8,14 @@ At the root of this folder is the PREVis publication ```PREVis_full_paper.pdf```
 ## Folders organization
 The folders are organized following phases of the instrument development and validation:
 
-- ``` / Phase 1 - Item development```: material related to generation and validation of candidate items --- *see **section 4** in the paper.*
-- ```/ Phase 2 - Scale development```: exploratory survey content, collected data, analysis notebooks and output tables and figures ---  *see **section 5** in the paper.*
-- ```/ Phase 3 - Scale validation```: validation survey content, collected data, analysis notebooks and outputs tables and figures ---  *see **section 6** in the paper.*
+- ```/ Replication - PREVis development figures```: study data and notebooks to generate data analysis and figures for the development of PREVis ---  *see **section 5** in the paper.*
+- ```/ Replication - PREVis validation figures```: input data and notebooks to generate data analysis and figures for the validation of PREVis ---  *see **section 6** in the paper.*
 
 ## Companion OSF repositories
 
 There are three OSF repositories for this project:
 
-- Original supplemental material on [osf.io/9cg8j](https://osf.io/9cg8j/)
 - Studies pre-registrations on [osf.io/q4sdm](https://osf.io/q4sdm/)
-- Additional documents in [osf.io/aewuq](https://osf.io/aewuq/): Full Research log and Methodology notes for cognitive interviews (pre-test in section 5 of the main paper). We separated these files because they contain embedded images that we cannot share under the CC BY licence.
+- Original supplemental material under CC BY licence on [osf.io/9cg8j](https://osf.io/9cg8j/), including all data files, analysis code, and code outputs such as csv files and figures for the entire research project. Also contains all figures in the paper and companion guide.
+- Additional documents in [osf.io/aewuq](https://osf.io/aewuq/): Full Research log and Methodology notes for cognitive interviews (pre-test in ***section 5*** of the main paper). We separated these files because they contain embedded images that we cannot share under the CC BY licence.
     
