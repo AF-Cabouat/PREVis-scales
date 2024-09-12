@@ -8,25 +8,56 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-#set working directory
-# my_dir <- "your_data_directory" #eg: "absolute_path_to/Supplementary-material-folder/2 - Scale development/"
-my_dir <- "/Users/anne-flore/git/readability-rebased/Supplementary-material-folder/2 - Scale development/"
-knitr::opts_knit$set(root.dir = paste(my_dir, "Results/Data_Analysis", sep=""))
+# Get the current R Markdown notebook file path and the grandparent folder
+get_current_rmd_path <- function() {
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    # When running interactively in RStudio
+    return(rstudioapi::getActiveDocumentContext()$path)
+  } else if (requireNamespace("knitr", quietly = TRUE)) {
+    # When knitting the document
+    return(knitr::current_input(dir = TRUE)) 
+  } else {
+    stop("Cannot determine the current R Markdown file path.")
+  }
+}
+
+current_rmd_path <- get_current_rmd_path()
+my_dir <- dirname(dirname(current_rmd_path))
+
+
+#### OPTIONAL: manual setting of directory
+#my_dir <- "your_data_directory" #eg: "C:/Absolute_path_to_git/PREVis-scales/research code/Replication - PREVis development figures"
+
+# We create the output folders if they don't exist
+if (!dir.exists(file.path(my_dir, "Data_Analysis"))) {
+  dir.create(file.path(my_dir, "Data_Analysis"), recursive = TRUE)
+}
+
+# We set our working directory to the Data_Analysis folder so that all outputs are saved there
+my_wd <- file.path(my_dir, "Data_Analysis")
+setwd(my_wd)
+knitr::opts_knit$set(root.dir = file.path("..", "Data_Analysis"))
+
+# Print the current working directory to verify
+print(getwd())
 
 ```
 
 ## Librairies
 
 ```{r librairies}
-library(dplyr)
-library(knitr) #RStudio
-library(png) #output png
-library(corrplot) #plot correlation matrix
-library(misty) #Little's test for MCAR
-library(mifa) # MICE for missing data handling
-library(psych) # for EFA
-library(RColorBrewer) #for corr matrix
-library(lavaan) # for cfa
+
+load_and_install_libraries <- function(libraries) {
+  for (lib in libraries) {
+    if (!require(lib, character.only = TRUE)) {
+      install.packages(lib)
+      library(lib, character.only = TRUE)
+    }
+  }
+}
+
+required_libraries <- c("psych", "misty", "mice", "mifa", "corrplot", "knitr", "lavaan", "dplyr", "RColorBrewer")
+load_and_install_libraries(required_libraries)
 ```
 ## Functions
 ```{r functions}
@@ -201,9 +232,7 @@ select_all_variables <- function (dataset, col_list) {
 
 ```
 
-## Multigroup CFA
-
-https://lavaan.ugent.be/tutorial/groups.html
+## Multigroup CFA using lavaan
 
 ```{r prepare model and data filters}
 
@@ -231,8 +260,11 @@ factor_to_string <- function(factor_name, factor_list) {
 ## Load data
 
 ```{r load data}
+setwd(my_wd)
 
-my_data <- read.csv(paste("data/ratings-stimulus.csv"), encoding="UTF-8")
+data_dir <- file.path(my_dir, "Data")
+file_path <- file.path(data_dir, "ratings-stimulus.csv")
+my_data <- read.csv(file_path, encoding="UTF-8")
 grp_data <- subset(my_data, select = -c(seed))
 data <- subset(grp_data, select = -c(stimulus))
 
@@ -253,6 +285,8 @@ if (!dir.exists("generatedPlots-CFA/correlations/")) {
 
 ## Descriptive statistics - Check minimum/maximum values per item, and screen for missing values
 ```{r data overview}
+
+setwd(my_wd)
 
 cat("\n\n==========================================\n
     ==========================================\n
@@ -294,6 +328,7 @@ dev.off()
 
 # Factor by factor (full, non-reduced) alpha reliability and item-total correlations
 ```{r item-total reliability for each full factor}
+setwd(my_wd)
 
 list_alpha_dfs <- list()
 
@@ -370,6 +405,8 @@ print(combined_df)
 
 # Reliability on aggregated data for factors with selected items
 ```{r reliability of each sub-scale (each factor) for model_1}
+setwd(my_wd)
+
 cat("\n\n==========================================\n")
 cat("==========================================\n")
 cat("\n \n AFTER ITEM REDUCTION \n \n")
@@ -480,6 +517,8 @@ for (factor in names(Readability_factors)){
 ```
 
 ```{r reliability of each sub-scale (each factor) for model_2}
+setwd(my_wd)
+
 cat("\n\n==========================================\n")
 cat("==========================================\n")
 cat("==========================================\n")
@@ -582,6 +621,8 @@ for (factor in names(Readability_factors)){
 ```
 
 ```{r reliability of each sub-scale (each factor) for model_3}
+setwd(my_wd)
+
 cat("\n\n==========================================\n")
 cat("==========================================\n")
 cat("==========================================\n")
@@ -684,6 +725,8 @@ for (factor in names(Readability_factors)){
 ```
 
 ```{r reliability of each sub-scale (each factor) for final model}
+setwd(my_wd)
+
 cat("\n\n==========================================\n")
 cat("==========================================\n")
 cat("==========================================\n")

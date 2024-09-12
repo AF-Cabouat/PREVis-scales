@@ -8,26 +8,60 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-#set working directory
-my_dir <- "your_data_directory" #eg: "absolute_path_to/Supplementary-material-folder/2 - Scale development/"
-knitr::opts_knit$set(root.dir = paste(my_dir, "Results/Data_Analysis", sep=""))
+# Get the current R Markdown notebook file path and the grandparent folder
+get_current_rmd_path <- function() {
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    # When running interactively in RStudio
+    return(rstudioapi::getActiveDocumentContext()$path)
+  } else if (requireNamespace("knitr", quietly = TRUE)) {
+    # When knitting the document
+    return(knitr::current_input(dir = TRUE)) 
+  } else {
+    stop("Cannot determine the current R Markdown file path.")
+  }
+}
+
+current_rmd_path <- get_current_rmd_path()
+my_dir <- dirname(dirname(current_rmd_path))
+
+
+#### OPTIONAL: manual setting of directory
+#my_dir <- "your_data_directory" #eg: "C:/Absolute_path_to_git/PREVis-scales/research code/Replication - PREVis development figures"
+
+# We create the output folders if they don't exist
+if (!dir.exists(file.path(my_dir, "Data_Analysis"))) {
+  dir.create(file.path(my_dir, "Data_Analysis"), recursive = TRUE)
+}
+
+# We set our working directory to the Data_Analysis folder so that all outputs are saved there
+my_wd <- file.path(my_dir, "Data_Analysis")
+setwd(my_wd)
+knitr::opts_knit$set(root.dir = file.path("..", "Data_Analysis"))
+
+# Print the current working directory to verify
+print(getwd())
 
 ```
 
 ## Librairies
 
 ```{r librairies}
-library(dplyr)
-library(knitr) #RStudio
-library(png) #output png
-library(corrplot) #plot correlation matrix
-library(misty) #Little's test for MCAR
-library(mifa) # MICE for missing data handling
-library(psych) # for EFA
-library(RColorBrewer) #for corr matrix
-library(lavaan) # for cfa
+
+load_and_install_libraries <- function(libraries) {
+  for (lib in libraries) {
+    if (!require(lib, character.only = TRUE)) {
+      install.packages(lib)
+      library(lib, character.only = TRUE)
+    }
+  }
+}
+
+required_libraries <- c("psych", "misty", "mice", "mifa", "corrplot", "knitr", "lavaan", "dplyr", "RColorBrewer")
+load_and_install_libraries(required_libraries)
 ```
+
 ## Functions
+
 ```{r functions}
 
 make_corrM <- function(d, order = NULL, nb_fa = 4){
@@ -205,7 +239,15 @@ factor_to_string <- function(factor_name, factor_list) {
 
 ```{r load data}
 
-my_data <- read.csv(paste("data/ratings-stimulus.csv"), encoding="UTF-8")
+setwd(my_wd)
+
+if (!dir.exists("generatedData-CFA/")) {
+  stop("You need to run reliability and Model_1 fit analyses first.")
+}
+
+data_dir <- file.path(my_dir, "Data")
+file_path <- file.path(data_dir, "ratings-stimulus.csv")
+my_data <- read.csv(file_path, encoding="UTF-8")
 grp_data <- subset(my_data, select = -c(seed))
 data <- subset(grp_data, select = -c(stimulus))
 
@@ -216,99 +258,11 @@ data <- subset(grp_data, select = -c(stimulus))
 # SECLECTED ITEMS ONLY #
 # ==================== #
 
-# Reliability on aggregated data for factors with selected items
-```{r reliability of each sub-scale (each factor)}
 
-cat("\n\n==========================================\n")
-cat("==========================================\n")
-cat("==========================================\n")
-cat("\n \n AFTER ITEM REDUCTION: MODEL 2 \n \n")
-cat("==========================================\n")
-cat("==========================================\n")
-cat("==========================================\n\n")
-
-
-#corr Matrix with selected items
-data_reduced_factors <- data %>% select(all_of(columns_to_keep))
-
-corrM <- make_corrM(data_reduced_factors, nb_fa = 4)
-
-## as csv
-write.csv(corrM,file=paste("generatedData-CFA/correlations/factor-", this_model, "-selected_items-corr.csv", sep =""))
-# as pdf
-this_file <- paste("generatedPlots-CFA/correlations/factor-", this_model,"-selected_items-corr.pdf", sep="")
-pdf(this_file, height=15, width=15)
-plot <- corrplot(corrM,
-        # type = 'lower', #only lower half
-        tl.srt = 30, #rotate text labels
-        method="color",
-        col = COL2('RdYlBu'),
-        order="original",
-        addrect = 4,
-        tl.col="black", tl.cex = 1.3, # Text label color and size
-        addCoef.col = "white", number.cex = 1, # Add coefficient of correlation and size
-        )
-dev.off()
-
-## Create the model from list Readability_factors
-# Apply the function to each element of the list
-formatted_strings <- sapply(names(Readability_factors), function(factor_name) {
-  factor_to_string(factor_name, Readability_factors[[factor_name]])
-})
-
-# Combine the strings into a single string
-model_string <- paste(formatted_strings, collapse = '\n')
-
-# Print the final string
-cat(model_string)
-
-
-for (factor in names(Readability_factors)){
-  cat(paste("\n ======================\n Individual factor reliability on selected items for", this_model, "-", factor, "\n (omega and alpha) \n"))
-  factor_data <- data %>% select(all_of(unlist(Readability_factors[[factor]])))
-  
-  # reliability
-  
-  # omega
-  nb_obs <- nrow(factor_data)
-  corrM <- make_corrM(factor_data, nb_fa = 1)
-  om <- omega(corrM, n.obs = nb_obs, 1) #https://personality-project.org/r/psych/HowTo/omega.pdf
-  summary(om)
-
-  # alpha
-  alpha_values <- psych::alpha(factor_data)
-  cat("Alpha raw:")
-  print(alpha_values$total$raw_alpha)
-  print(alpha_values$total)
-
-  # output df
-  factor_alpha_df <- alpha_values$total
-  factor_alpha_df$omega_tot <- om$omega.tot
-  write.csv(factor_alpha_df,file=paste("generatedData-CFA/reliability/to aggregate/",factor,"-",this_model,"-reliability.csv"))
-
-  # factor-wise reliability for each stimulus
-  for (letter in stimuli_letters){
-    the_data <- filter(grp_data, stimulus == letter)
-    stimulus_factor_data <- the_data %>% select(all_of(unlist(Readability_factors[[factor]])))
-    
-    # omega
-    nb_obs <- nrow(stimulus_factor_data)
-    corrM <- make_corrM(stimulus_factor_data, nb_fa = 1)
-    om <- omega(corrM, n.obs = nb_obs, 1)
-    
-    # alpha
-    alpha_values <- psych::alpha(stimulus_factor_data)
-    
-    # output df
-    factor_stimulus_alpha_df <- alpha_values$total
-    factor_alpha_df$omega_tot <- om$omega.tot
-    write.csv(factor_stimulus_alpha_df,file=paste("generatedData-CFA/reliability/to aggregate/",factor,"-",this_model,"-",letter,"-reliability.csv", sep =""))
-  }
-}
-
-```
 #We already ran checks on overall data during EFA. Now we also check individual subgroups
 ```{r individual group data normality and EFA appropriateness checks}
+
+setwd(my_wd)
 
 for (letter in stimuli_letters){
   the_data <- filter(grp_data, stimulus == letter)
@@ -342,6 +296,7 @@ summary(this_fit)
 ### Model fit indices
 
 ```{r model fit indices}
+
 #summary(fit, standardized=TRUE, fit.measures=TRUE)
 
 cat("\n==============\n")

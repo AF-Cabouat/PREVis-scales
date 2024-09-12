@@ -325,6 +325,7 @@ analyze_stimuli <-function(num){
 
 ```{r run, include=FALSE}
 setwd(my_wd)
+data_dir = file.path(my_dir, "Data")
 
 stimuli_letters <- list("A","B","C","D","E","F","Agg")
 
@@ -346,7 +347,6 @@ if (!dir.exists("generatedPlots-EFA/correlationsPlots_variations/")) {
   dir.create("generatedPlots-EFA/correlationsPlots_variations/", recursive = TRUE)
 }
 
-data_dir = file.path(my_dir, "Data")
 
 participantResponseFiles <- list.files(path= data_dir, pattern = "\\.csv$")
 
