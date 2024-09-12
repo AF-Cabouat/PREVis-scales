@@ -24,8 +24,8 @@ When running the notebooks, Rstudio will attempt to load the following libraries
 ### Python notebooks
 
 You will need Pyhton 3.9+ to run these notebooks along with the following libraries and their dependencies:
-- ```pandas``` *version 2.0+* https://pandas.pydata.org/docs/getting_started/install.html
-- ```seaborn``` *version 0.13+* https://seaborn.pydata.org/installing.html
+- ```pandas``` *version 2.1* ```pip install pandas==2.1``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
+- ```seaborn``` *version 0.13.1* ```pip install seaborn==0.13.1``` https://seaborn.pydata.org/installing.html
 
 ## How to run notebooks
 
@@ -45,7 +45,7 @@ Reliability analyses described in ***Appendix L***. The equivalent notebook was 
 - **INPUT file** from ```Data/```:
     - ```data/ratings-stimulus.csv```
 - **OUTPUT files** in ```Data_Analysis/```:
-    - ```generatedData-CFA/reliability/```
+    - ```generatedData-CFA/reliability/```: this notebook will produce multiple individual files for future processing in Jupyter notebook ```Reproduce4```.
 
 *This notebook uses a variable called ```full_Readability_factors``` to filter the dataset. This variable represents the 4-factors structure described in ***Appendix K*** (see also ***Fig. 28*** in the paper, and corresponding OSF file: ```Phase 2 - Scale development/Manual figures/EFA_loadings-4_factors.pdf``` at [osf.io/wrs8k](https://osf.io/wrs8k))*
 
@@ -54,10 +54,12 @@ Reliability analyses described in ***Appendix L***. The equivalent notebook was 
 ### ```Reproduce3-MG-CFA[Modelx].Rmd``` [Model1, Model_2, Model_3, Model_final]
 Multi-Group Confirmatory Factor analysis for each model explored as described in ***Appendix M***. Each notebook uses a different ```this_model``` variable to filter the dataset.
 
+Run the notebooks in the order mentioned above.
+
 - **INPUT file** from ```Data/```:
     - ```data/ratings-stimulus.csv```
 - **OUTPUT files** in ```Data_Analysis/```:
-    - ```generatedData-CFA/```
+    - ```generatedData-CFA/```: fit indices values csv files
     - ```generatedPlots-CFA/correlations/```
 
 ### ```Reproduce4-reliability-MG-CFA-analysis.ipynb```
