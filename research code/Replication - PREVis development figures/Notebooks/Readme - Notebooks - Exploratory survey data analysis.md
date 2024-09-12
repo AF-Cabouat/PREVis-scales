@@ -9,23 +9,25 @@ This folder contains the notebooks used to perform analyses of data collected in
 ### R notebooks
 
 R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
-When running the notebooks, Rstudio will attempt to load the following libraries and to install missing libraries:
-- ```dplyr```
-- ```tibble```
-- ```knitr```
-- ```psych```
-- ```lavaan```
+When running the notebooks, Rstudio will attempt to load the following libraries, and to install them if they are missing:
 - ```corrplot```
-- ```RColorBrewer```
-- ```misty```
+- ```dplyr```
+- ```knitr```
+- ```lavaan```
 - ```mice```
 - ```mifa```
+- ```misty```
+- ```psych```
+- ```RColorBrewer```
+- ```tibble```
 
 ### Python notebooks
 
-You will need Pyhton 3.9+ to run these notebooks along with the following libraries and their dependencies:
-- ```pandas``` *version 2.1* ```pip install pandas==2.1``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
-- ```seaborn``` *version 0.13.1* ```pip install seaborn==0.13.1``` https://seaborn.pydata.org/installing.html
+You will need Pyhton 3.9+ to run these notebooks with JupyterLab.
+You can install Jupyterlab using ```pip install jupyterlab```, or check https://jupyter.org/install.
+You will also need the following libraries and their dependencies:
+- ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
+- ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
 ## How to run notebooks
 
