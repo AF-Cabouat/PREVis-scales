@@ -6,10 +6,10 @@ This folder contains the notebooks used to perform analyses of data collected in
 
 ## Requirements
 
-### R code
+### R notebooks
 
 R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
-The notebooks will attempt to load the following libraries and their dependencies. It will install missing libraries:
+When running the notebooks, Rstudio will attempt to load the following libraries and to install missing libraries:
 - ```dplyr```
 - ```tibble```
 - ```knitr```
@@ -21,19 +21,11 @@ The notebooks will attempt to load the following libraries and their dependencie
 - ```mice```
 - ```mifa```
 
-### Python code
+### Python notebooks
 
-Pyhton Jupyter notebooks require you to install Pyhton 3.9+ along with the following libraries and their dependencies:
+You will need Pyhton 3.9+ to run these notebooks along with the following libraries and their dependencies:
 - ```pandas``` *version 2.0+* https://pandas.pydata.org/docs/getting_started/install.html
 - ```seaborn``` *version 0.13+* https://seaborn.pydata.org/installing.html
-
-## Data files
-The ```Data``` folder contains 8 csv files from which all analyses are run:
-- Files ```1.csv``` to ```6.csv``` correspond to collected ratings for stimuli A to F. They are used to perform Exploratory Factor Analysis.
-- File ```7.csv``` is the concatenated version of files ```1``` to ```6```. It is used to perform Exploratory Factor Analysis.
-- File ```stimulus.csv``` is equivalent to file ```7``` but includes a column indicating the stimuli letter for each participant. It is used to perform Confirmatory Factor Analysis.
-
-This data was extracted from the study raw data after pre-processing. If you are interested in reproducing these steps, our OSF repository includes the raw (pseudonimized) data as well as the notebooks with the pre-processing code.
 
 ## How to run notebooks
 
@@ -81,8 +73,6 @@ Structuring data from ```Reproduce2-reliability.Rmd``` and ```Reproduce3-MG-CFA.
 Subscales average scores point plots with 95% CI, as PDF files.
 - **INPUT file** from ```Data_Analysis/```:
     - ```data/ratings-stimulus.csv```
-    - **OUTPUT files** in ```Data_Analysis/```:
-    - ```generatedPlots/ratings-PREVis```: contains ***Fig. 30*** to ***Fig. 47*** in the paper: data generated from invidiual PREVis subscales, for each stimulus, with individual items' average ratings and 95% CI.
-    - ```generatedPlots/ratings-factors``` contains ***Fig. 48*** to ***Fig. 65*** in the paper: plots generated for each item in the 4-factors solution from ***Appendix J***, with the item's and the factor's average ratings and 95% CI, across stimuli.
-
-- **OUTPUT files** in ```Data_Analysis/generatedPlots/ratings```
+- **OUTPUT files** in ```Data_Analysis/```:
+    - ```RatingPlots-PREVis``` ***Fig. 30*** to ***Fig. 53*** in the paper: data generated from invidiual PREVis subscales, for each stimulus, with individual items' average ratings and 95% CI.
+    - ```RatingPlots-factors``` ***Fig. 29*** and ***Fig. 54*** to ***Fig. 71*** in the paper: plots generated for each item in the 4-factors solution from ***Appendix J***, with the item's and the factor's average ratings and 95% CI, across stimuli.

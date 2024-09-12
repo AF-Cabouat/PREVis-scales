@@ -5,13 +5,12 @@ This folder contains the code related to the development of PREVis --- *see **se
 ## Subfolders
 
 ### ```/Notebooks```
-This folder contains numbered notebooks ( 5 ```Python``` Jupyter notebooks and 7 ```R Markdown``` notebooks) used for data analyses on the final survey (see ***Section 5.5*** and ***Appendices G*** to ***O*** in the paper), as well as 7 html outputs from ```R``` notebooks. A detailed readme file provides instructions for running the notebooks and recreating all files from the ```Results/Data_Analysis``` subfolder.
+This folder contains numbered notebooks and a detailed readme file to recreate figures 14 to 27 and 29 to 71.
 
-### ```/Results```
-This folder contains data collected in studies we conducted during the development process (pre-test, time estimation pilot, and final exploratory survey), as well as data resulting from analyses and generated figures.
+### ```/Data```
+This folder contains 8 csv files from which all analyses are run:
+- Files ```1.csv``` to ```6.csv``` correspond to collected ratings for stimuli A to F. They are used to perform Exploratory Factor Analysis.
+- File ```7.csv``` is the concatenated version of files ```1``` to ```6```. It is used to perform Exploratory Factor Analysis.
+- File ```stimulus.csv``` is equivalent to file ```7``` but includes a column indicating the stimuli letter for each participant. It is used to perform Confirmatory Factor Analysis.
 
-#### Root files in ```/Results```
-At the root of this folder is the ```results_cleaned.csv``` file with data collected from our survey on Limesurvey, and corresponding Prolific demographics.
-
-#### Subfolders in ```/Results``` 
--  ```/Data_Analysis/```: this folder contains all files (tables and figures) generated from notebooks during data analyses (described in ***Section 5.5*** and ***Appendices G*** to ***O*** in the paper).
+This data was extracted from our exploratory study's raw data after pre-processing. If you are interested in reproducing these steps, our OSF repository includes the raw (pseudonimized) data as well as the notebooks with the pre-processing code.
