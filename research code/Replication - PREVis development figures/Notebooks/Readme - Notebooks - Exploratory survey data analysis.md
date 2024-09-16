@@ -4,9 +4,9 @@ This folder contains the notebooks used to perform analyses of data collected in
 
 # Running notebooks
 
-These instructions were tested on a clean Windows 10 installation (and with the specific requirements noted below). Please note that for the installation of the prerequisites (Anaconda Python) you may need to disable Windows' virus and malware protection—otherwise the installation takes forever (at least in a VM). To do so, open the Windows Settings and then, under "Updates & Security > Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings" (temporarily) diable "Real-time protection", "Cloud-delivered protection", "Automatic sample submission", and "Tamper protection".
-
 ## Requirements
+
+These instructions were tested on a clean Windows 10 installation (and with the specific requirements noted below). Please note that for the installation of the prerequisites (Anaconda Python) you may need to disable Windows' virus and malware protection—otherwise the installation takes forever (at least in a VirtualBox VM). To do so, open the Windows Settings and then, under "Updates & Security > Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings" (temporarily) diable "Real-time protection", "Cloud-delivered protection", "Automatic sample submission", and "Tamper protection".
 
 ### Repository
 
