@@ -1,8 +1,10 @@
 # Notebooks - Exploratory study data analysis
 
-This folder contains the notebooks used to perform analyses of data collected in the exploratory survey—see ***Sections 5.4*** and ***5.5***, and ***Appendices F*** to ***N*** in the paper. Running the notebooks will reproduce Figures 14–27 and 29–71 (in the appendix).
+This folder contains the notebooks used to perform analyses of data collected in the exploratory survey—see ***Sections 5.4*** and ***5.5*** as well as ***Appendices F–N*** in the paper. Running the notebooks will reproduce Figures 14–27 and 29–71 (in the appendix).
 
 # Running notebooks
+
+These instructions were tested on a clean Windows 10 installation (and with the specific requirements noted below). Please note that for the installation of the prerequisites (Anaconda Python) you may need to disable Windows' virus and malware protection—otherwise the installation takes forever (at least in a VM). To do so, open the Windows Settings and then, under "Updates & Security > Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings" (temporarily) diable "Real-time protection", "Cloud-delivered protection", "Automatic sample submission", and "Tamper protection".
 
 ## Requirements
 
