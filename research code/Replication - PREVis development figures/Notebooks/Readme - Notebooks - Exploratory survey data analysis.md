@@ -8,7 +8,7 @@ This folder contains the notebooks used to perform analyses of data collected in
 
 ### R notebooks
 
-R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, for specifically for Windows, https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
+R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
 When running the notebooks, Rstudio will attempt to load the following libraries, and to install them if they are missing:
 - ```corrplot```
 - ```dplyr```
