@@ -1,6 +1,6 @@
 # Notebooks - Exploratory study data analysis
 
-This folder contains the notebooks used to perform analyses of data collected in the exploratory survey—see ***Sections 5.4*** and ***5.5***, and ***Appendices F*** to ***N*** in the paper. Running the notebooks will reproduce Appendices Figures 14–27 and 29–71.
+This folder contains the notebooks used to perform analyses of data collected in the exploratory survey—see ***Sections 5.4*** and ***5.5***, and ***Appendices F*** to ***N*** in the paper. Running the notebooks will reproduce Figures 14–27 and 29–71 (in the appendix).
 
 # Running notebooks
 
