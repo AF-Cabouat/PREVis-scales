@@ -6,11 +6,15 @@ This folder contains the notebooks used to perform analyses of data collected in
 
 ## Requirements
 
-These instructions were tested on a clean Windows 10 installation (and with the specific requirements noted below). Please note that for the installation of the prerequisites (Anaconda Python) you may need to disable Windows' virus and malware protection—otherwise the installation takes forever (at least in a VirtualBox VM). To do so, open the Windows Settings and then, under "Updates & Security > Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings" (temporarily) disable "Real-time protection".
+These instructions were tested on a clean Windows 10 installation (and with the specific requirements noted below, and specifically [Anaconda Python](https://www.anaconda.com/) for the Python environment). Please note that for the installation of the prerequisites (Anaconda Python) you may need to disable Windows' virus and malware protection—otherwise the installation takes forever (at least in a VirtualBox VM). To do so, open the Windows Settings and then, under "Updates & Security > Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings" (temporarily) disable "Real-time protection" (but only ever do this in a separate VM, not on your main system).
 
 ### Repository
 
-Download the whole repository to a local file, either via `git clone` or by downloading the corresponding zip archive and extracting it to a known location.
+Download the whole repository to a local file, either via
+```
+git clone https://github.com/AF-Cabouat/PREVis-scales.git
+```
+or by downloading the corresponding zip archive and extracting it to a known location.
 
 ### R notebooks
 
@@ -27,9 +31,21 @@ When running the notebooks, Rstudio will attempt to load the following libraries
 - ```RColorBrewer```
 - ```tibble```
 
+### Preparation for Python prerequisites under Windows
+
+Under Windows, first install the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), then run the command
+```
+./vs_buildtools.exe --norestart --passive --downloadThenInstall --includeRecommended --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Workload.MSBuildTools
+```
+in the same directory where you downloaded the Microsoft C++ Build Tools installer (i.e., `vs_buildtools.exe`), and reboot.
+
 ### Python notebooks
 
-You will need Python 3.9+ to run these notebooks with JupyterLab. Install a respective Python environment (e.g., https://www.anaconda.com/download/ or https://www.python.org/downloads/) as well as the requirements in one go by (first, under Windows, installing the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), then running the command `vs_buildtools.exe --norestart --passive --downloadThenInstall --includeRecommended --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Workload.MSBuildTools` in the same directory where you downloaded the Microsoft C++ Build Tools installer, rebooting, and then) using ```pip install -r requirements.txt``` (using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
+You will need Python 3.9+ to run these notebooks with JupyterLab. Install a respective Python environment (e.g., https://www.anaconda.com/download/ or https://www.python.org/downloads/) as well as the requirements in one go by using
+```
+pip install -r requirements.txt
+```
+(using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
 - ```Jupyterlab```: use the ```pip install jupyterlab``` command, or check https://jupyter.org/install
 - under Windows, you also need the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) to be able to install `pandas`
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
