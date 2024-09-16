@@ -6,6 +6,10 @@ This folder contains the notebooks used to perform analyses of data collected in
 
 ## Requirements
 
+### Repository
+
+Download the whole repository to a local file, either via `git clone` or by downloading the corresponding zip archive and extracting it to a known location.
+
 ### R notebooks
 
 R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
@@ -23,8 +27,9 @@ When running the notebooks, Rstudio will attempt to load the following libraries
 
 ### Python notebooks
 
-You will need Python 3.9+ to run these notebooks with JupyterLab. Install a respective Python environment ( e.g., https://www.python.org/downloads/ or https://www.anaconda.com/download/) as well as the requirements in one go using ```pip install -r requirements.txt``` (using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
+You will need Python 3.9+ to run these notebooks with JupyterLab. Install a respective Python environment (e.g., https://www.anaconda.com/download/ or https://www.python.org/downloads/) as well as the requirements in one go by (first, under Windows, installing the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), then running the command `vs_buildtools.exe --norestart --passive --downloadThenInstall --includeRecommended --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Workload.MSBuildTools` in the same directory where you downloaded the Microsoft C++ Build Tools installer, rebooting, and then) using ```pip install -r requirements.txt``` (using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
 - ```Jupyterlab```: use the ```pip install jupyterlab``` command, or check https://jupyter.org/install
+- under Windows, you also need the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) to be able to install `pandas`
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
