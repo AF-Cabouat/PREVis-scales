@@ -43,4 +43,4 @@ A companion OSF repository was provided at the time of submission on [osf.io/9cg
 
 ## Process to replicate Figures 4 and 5-bottom from the paper
 
-The process for reproducing Figures 14 to 27 and 29 to 71 from the Appendix relies on R Notebooks and is described in detail in a [dedicated readme file](research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks/Readme%20-%20Notebooks%20-%20Exploratory%20survey%20data%20analysis.md), please see it and follow the instructions there.
+The process for reproducing Figures 14 to 27 and 29 to 71 from the Appendix relies on R and Jupyter Notebooks and is described in detail in a [dedicated readme file](research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks/Readme%20-%20Notebooks%20-%20Exploratory%20survey%20data%20analysis.md), please see it and follow the instructions there.
