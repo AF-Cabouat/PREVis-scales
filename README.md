@@ -43,4 +43,4 @@ A companion OSF repository was provided at the time of submission on [osf.io/9cg
 
 ## Process to replicate Figures 4 and 5-bottom from the paper
 
-To be filled in, detailed step-by-step instructions. Ideally, there should only be a general prerequisites subsection with, if possible, a one-line install them all call (like with a requirements.txt in Python) and then another section that describes again essentially a one-line script call that creates the respective images from the data from the repository.
+The process for reproducing these figures relies on Jupyter Notebooks and is described in detail in a [dedicated readme file](research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks/Readme%20-%20Notebooks%20-%20Exploratory%20survey%20data%20analysis.md), please see it and follow the instructions there.
