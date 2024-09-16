@@ -28,8 +28,6 @@ You will need Python 3.9+ to run these notebooks with JupyterLab. Install a resp
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
-To install all of the requirements in 
-
 ## How to run notebooks
 
 Run notebooks in order (1 to 3): the ```Data_Analysis/``` folder and output nested structure will be generated from the code.
