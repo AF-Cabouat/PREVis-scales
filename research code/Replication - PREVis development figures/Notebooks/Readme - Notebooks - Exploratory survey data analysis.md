@@ -53,7 +53,11 @@ pip install -r requirements.txt
 
 ## How to run notebooks
 
-First, open RStudio. Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right. There you will also see a note about the missing R packages mentioned above, simply click on "Install" to get them installed. Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run Next Chunk". Proceed with running the notebooks as described next.
+First, open RStudio. Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right. There you will also see a note about the missing R packages mentioned above, simply click on "Install" to get them installed. 
+
+Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run All" (or Ctrl + Alt + R). Proceed with running the notebooks as described next.
+
+You can also choose to generate a file containing the code's complete outputs with the ```knit``` package. To that end, instead click on "Knit" in the local menu of the top-left notebook view and select HTML. All HTML files from our original research project are available on our OSF repository at [osf.io/9cg8j](https://osf.io/9cg8j).
 
 Run notebooks in order (1 to 3): the ```Data_Analysis/``` folder and output nested structure will be generated from the code.
 
