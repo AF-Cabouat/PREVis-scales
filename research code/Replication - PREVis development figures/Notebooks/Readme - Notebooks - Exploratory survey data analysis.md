@@ -23,7 +23,7 @@ When running the notebooks, Rstudio will attempt to load the following libraries
 
 ### Python notebooks
 
-You will need Python 3.9+ to run these notebooks with JupyterLab. Install a respective Python environment as well as the requirements in one go using ```pip install -r requirements.txt``` (using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
+You will need Python 3.9+ to run these notebooks with JupyterLab. Install a respective Python environment ( e.g., https://www.python.org/downloads/ or https://www.anaconda.com/download/) as well as the requirements in one go using ```pip install -r requirements.txt``` (using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
 - ```Jupyterlab```: use the ```pip install jupyterlab``` command, or check https://jupyter.org/install
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
