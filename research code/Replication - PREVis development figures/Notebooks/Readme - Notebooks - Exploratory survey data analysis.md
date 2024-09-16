@@ -23,7 +23,7 @@ When running the notebooks, Rstudio will attempt to load the following libraries
 
 ### Python notebooks
 
-You will need Pyhton 3.9+ to run these notebooks with JupyterLab.
+You will need Python 3.9+ to run these notebooks with JupyterLab.
 You can install Jupyterlab using ```pip install jupyterlab```, or check https://jupyter.org/install.
 You will also need the following libraries and their dependencies:
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
