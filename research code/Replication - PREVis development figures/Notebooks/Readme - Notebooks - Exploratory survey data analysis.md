@@ -53,6 +53,8 @@ pip install -r requirements.txt
 
 ## How to run notebooks
 
+First, open RStudio. Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right. There you will also see a note about the missing R packages mentioned above, simply click on "Install" to get them installed. Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run Next Chunk". Proceed with running the notebooks as described next.
+
 Run notebooks in order (1 to 3): the ```Data_Analysis/``` folder and output nested structure will be generated from the code.
 
 ### ```Reproduce1-EFA.Rmd```
