@@ -67,12 +67,23 @@ In both cases, the notebook will open at the top-left, taking up the main part o
 
 After opening the `Reproduce1-EFA.Rmd` file, a yelow ribbon might appear at the tope of the file's window with a note about the missing R packages mentioned above: **please do NOT choose to install these**. Click on the x button on the right side of the message instead, and run the first chunk called "r libraries" by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or place your cursor anywhere inside the chunk and press Ctrl + R.
 
+After running this chunk of code, please check the messages in the "Console" tab at the bottom left of the RStudio window. You will see one of two possible messages:
+
+> misty package version 0.6.0 installed and loaded. You can proceed with the next chunk.
+
+You can proceed to running the notebooks (read below on how to do that).
+
+> RESTARTING R TO PREPARE CLEAN INSTALLATION OF CORRECT PACKAGE VERSION. PLEASE RUN THIS CODE AGAIN.
+
+If you read this warning, you will need to run the same chunk again in order to install the correct version of the misty package.
+
+
 # How to run notebooks
 
 Run notebooks in order (1 to 3): the ```Data_Analysis/``` folder and output nested structure will be generated from the code.
 
 For each notebook:
-1. First run the chunk called ```r oursetup``` alone by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R.
+1. First run the chunk called ```{r oursetup}``` alone by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R. The ```{r oursetup}``` chunk is usually the first in the file, except for `Reproduce1-EFA.Rmd` where it is the second chunk 
 2. In the top-right window in RStudio, under the "Environment" tab, find the variable ```my_dir``` in "Values" and verify that it hold the absolute path to the wordking directory for your local [research code/Replication - PREVis development figures](/research%20code/Replication%20-%20PREVis%20development%20figures/) folder. If it is not the case (for example, if the variable's value is a relative path), repeat step 1.
 3. Then, use the Run button at the top-right corner of the document window and choose "Run all" at the bottom (or press Ctrl + Alt + R).
 

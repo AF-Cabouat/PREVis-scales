@@ -60,13 +60,13 @@ required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "lavaan", 
 load_and_install_libraries(required_libraries)
 
 if (!require("misty", character.only = TRUE)) {
-  stop("misty package is not installed. Open the first notebook ('Reproduce1') of this directory and run the first chunk called 'r libraries' to install it.)
-} else (
+  stop("misty package is not installed. Open the first notebook ('Reproduce1') in this directory and run the first chunk called 'r libraries' to install it.")
+} else {
   library("misty", character.only = TRUE)
   if (packageVersion("misty") != "0.6.0") {
-    stop("misty package version is not 0.6.0. Open the first notebook ('Reproduce1') of this directory and run the first chunk called 'r libraries' TWICE to uninstall the current version and replace it with the correct version.)
+    stop("misty package version is not 0.6.0. Open the first notebook ('Reproduce1') in this directory and run the first chunk called 'r libraries' TWICE to uninstall the current version and replace it with the correct version.")
   }
-)
+}
 
 ```
 
