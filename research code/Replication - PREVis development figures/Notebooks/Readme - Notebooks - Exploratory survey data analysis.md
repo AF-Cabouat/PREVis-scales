@@ -40,13 +40,6 @@ pip install -r requirements.txt
 #### Software installation
 R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the RStudio software available on https://posit.co/download/rstudio-desktop/. We will also need Rtools to compile arhived versions of some packages: download and install the Rtools43 installer from https://cran.rstudio.com/bin/windows/Rtools/rtools43/rtools.html.
 
-<!-- #### Manual installation of misty package
-- ```misty``` version 0.6.0
-remove.packages("misty")
-
-Then we need to manually install version 0.6.0 of the `misty` package. 
-Download version [0.6.0 of the `misty` package](https://cran.r-project.org/src/contrib/Archive/misty/misty_0.6.0.tar.gz) to a local directory.
-Then, in R Studio, select Tools > Install packages ... from the top menu, select "Package Archive File (.zip; .tar.gz)" for "Install from:", and then click the browse button to open a dialog to select the downloaded package archive, then click the "Install" button. -->
 
 #### Automated installation of other packages
 When running the notebooks, RStudio will attempt to load the following libraries, and to install them if they are missing:
@@ -59,7 +52,9 @@ When running the notebooks, RStudio will attempt to load the following libraries
 - ```psych```
 - ```RColorBrewer```
 - ```tibble```
-- ```misty``` > WARNING: if you already have a version of the misty package other than 0.6.0, this will replace your current version with the 0.6.0 version!
+
+- ```misty``` **WARNING**: version 0.6.0 required >> if you already have a version of the misty package other than 0.6.0, the code in this notebook will replace your current version with the 0.6.0 version!
+
 
 
 

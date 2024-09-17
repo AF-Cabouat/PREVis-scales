@@ -6,26 +6,65 @@ date: "2024-01-09"
 
 ```{r libraries}
 
+# Libraries
 load_and_install_libraries <- function(libraries) {
   for (lib in libraries) {
     if (!require(lib, character.only = TRUE)) {
       install.packages(lib)
-      library(lib, character.only = TRUE)
+      library(lib)
     }
   }
 }
 
-required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "tibble","misty")
+required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "tibble")
 load_and_install_libraries(required_libraries)
 
+
+# Taking care of misty
 if (!require("misty", character.only = TRUE)) {
+  
+  warning("misty package not installed. Installing version 0.6.0 now and its dependency 'norm'.")
+  warning("This process requires RTools installed on your system.")
+  
+  install.packages("norm")
   packageurl <- "https://cran.r-project.org/src/contrib/Archive/misty/misty_0.6.0.tar.gz"
   install.packages(packageurl, repos=NULL, type="source")
-} 
+  
+  library("misty", character.only = TRUE)
+  cat("######################################################################################")
+  cat("misty package version 0.6.0 installed and loaded. You can proceed with the next chunk.")
+  cat("######################################################################################")
+  
+} else {
+  library("misty")
+  if (packageVersion("misty") != "0.6.0") {
+    
+    warning("Required misty version: 0.6.0. Found a different version installed:")
+    print(packageVersion("misty"))
+    
+    cat("Uninstalling misty...")
+    remove.packages("misty")
+    cat("misty was successfully uninstalled.")
+    
+    warning("\n#####################RESTARTING R TO PREPARE CLEAN INSTALLATION OF CORRECT PACKAGE VERSION. PLEASE RUN THIS CODE AGAIN.######################\n")
+    .rs.restartR()
+  } else {
+    if (packageVersion("misty") == "0.6.0") {
+      cat("###########################################################################\n")
+      cat("misty package version 0.6.0 installed. You can proceed with the next chunk.\n")
+      cat("###########################################################################\n")
+    }
+  }
+}
 
 ```
 
+
+
 ```{r setup, include=TRUE}
+
+# Now to setting up the working directory
+
 knitr::opts_chunk$set(echo = TRUE)
 
 # Get the current R Markdown notebook file path and the grandparent folder
