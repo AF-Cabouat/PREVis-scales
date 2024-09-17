@@ -11,7 +11,7 @@ load_and_install_libraries <- function(libraries) {
   for (lib in libraries) {
     if (!require(lib, character.only = TRUE)) {
       install.packages(lib)
-      library(lib)
+      library(lib, character.only = TRUE)
     }
   }
 }
@@ -61,7 +61,7 @@ if (!require("misty", character.only = TRUE)) {
 
 
 
-```{r setup, include=TRUE}
+```{r oursetup, include=TRUE}
 
 # Now to setting up the working directory
 
