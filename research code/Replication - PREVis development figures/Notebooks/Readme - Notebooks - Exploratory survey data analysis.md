@@ -35,7 +35,7 @@ pip install -r requirements.txt
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
-## R environement
+## R environment
 
 ### Software installation
 R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the RStudio software available on https://posit.co/download/rstudio-desktop/. We will also need Rtools to compile arhived versions of some packages: download and install the Rtools43 installer from https://cran.rstudio.com/bin/windows/Rtools/rtools43/rtools.html.
@@ -53,27 +53,33 @@ When running the first notebook, RStudio will attempt to load the following libr
 - ```RColorBrewer```
 - ```tibble```
 
-- ```misty``` **WARNING**: version 0.6.0 required >> if you already have a version of the misty package other than 0.6.0, the code in this notebook will replace your current version with the 0.6.0 version!
+- ```misty``` **WARNING**: version 0.6.0 required >> if you already have a version of the misty package other than 0.6.0, the code in the first notebook will replace your current version with the 0.6.0 version!
 
+To ensure you install the correct version of the packages, follow the steps below:
+
+#### Step 1
 First, open RStudio with the `Reproduce1-EFA.Rmd` notebook from the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned.
 
-To open a file in RStudio, you can use the "File" > "Open File (Ctrl + O)" command from the top menu in RStudio. Alternatively, you can go to the "Files" tab in the section on the bottom-right, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file.
+> To open a file in RStudio, you can use the "File" > "Open File (Ctrl + O)" command from the top menu in RStudio. Alternatively, you can go to the "Files" tab in the section on the bottom-right, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned, and double-click on the file you want to open.
 In both cases, the notebook will open at the top-left, taking up the main part of the RStudio window.
 
-There you will also see a note about the missing R packages mentioned above: please do NOT choose to install these. Click on the x button on the right side of the message instead, and run the first chunk called "r libraries" by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or place your cursor anywhere inside the chunk and press Ctrl + R.
+#### Step 2
 
-Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run All" (or Ctrl + Alt + R). Proceed with running the notebooks as described next.
-
-You can also choose to generate a file containing the code's complete outputs with the ```knit``` package. To that end, instead click on "Knit" in the local menu of the top-left notebook view and select HTML. All HTML files from our original research project are available on our OSF repository at [osf.io/9cg8j](https://osf.io/9cg8j).
-
+After opening the `Reproduce1-EFA.Rmd` file, a yelow ribbon might appear at the tope of the file's window with a note about the missing R packages mentioned above: **please do NOT choose to install these**. Click on the x button on the right side of the message instead, and run the first chunk called "r libraries" by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or place your cursor anywhere inside the chunk and press Ctrl + R.
 
 # How to run notebooks
 
 Run notebooks in order (1 to 3): the ```Data_Analysis/``` folder and output nested structure will be generated from the code.
 
 For each notebook:
-- first run the chunk called ```r oursetup``` alone by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R.
-- then, use the Run button at the top-right corner of the document window and choose "Run all" at the bottom (or press Ctrl + Alt + R).
+1. First run the chunk called ```r oursetup``` alone by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R.
+2. In the top-right window in RStudio, under the "Environment" tab, find the variable ```my_dir``` in "Values" and verify that it hold the absolute path to the wordking directory for your local [research code/Replication - PREVis development figures](/research%20code/Replication%20-%20PREVis%20development%20figures/) folder. If it is not the case (for example, if the variable's value is a relative path), repeat step 1.
+3. Then, use the Run button at the top-right corner of the document window and choose "Run all" at the bottom (or press Ctrl + Alt + R).
+
+Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run All" (or Ctrl + Alt + R). Proceed with running the notebooks as described next.
+
+You can also choose to generate a file containing the code's complete outputs with the ```knit``` package. To that end, instead click on "Knit" in the local menu of the top-left notebook view and select HTML. All HTML files from our original research project are available on our OSF repository at [osf.io/9cg8j](https://osf.io/9cg8j).
+
 
 ### ```Reproduce1-EFA.Rmd```
 Exploratory Factor Analyses described in ***section 5.5*** and ***Appendices F*** to ***J*** in the paper. The equivalent notebook was uploaded on OSF as ```3-EFA-+-all.Rmd```
