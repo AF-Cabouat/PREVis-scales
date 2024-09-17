@@ -26,7 +26,7 @@ if (!require("misty", character.only = TRUE)) {
   warning("misty package not installed. Installing version 0.6.0 now and its dependency 'norm'.")
   warning("This process requires RTools installed on your system.")
   
-  install.packages("norm")
+  install.packages(c("norm",  "ggplot2", "lavaan", "readxl", "rstudioapi", "writexl"))
   packageurl <- "https://cran.r-project.org/src/contrib/Archive/misty/misty_0.6.0.tar.gz"
   install.packages(packageurl, repos=NULL, type="source")
   

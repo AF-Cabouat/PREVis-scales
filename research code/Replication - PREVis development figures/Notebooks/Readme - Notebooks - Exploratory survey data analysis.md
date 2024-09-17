@@ -2,19 +2,19 @@
 
 This folder contains the notebooks used to perform analyses of data collected in the exploratory survey—see ***Sections 5.4*** and ***5.5*** as well as ***Appendices F–N*** in the paper. Running the notebooks will reproduce Figures 14–27 and 29–71 (in the appendix).
 
-# Running notebooks
-
-## Requirements
+# Requirements
 
 These instructions were tested on a clean Windows 10 installation (and with the specific requirements noted below, and specifically [Anaconda Python](https://www.anaconda.com/) for the Python environment). Please note that for the installation of the prerequisites (Anaconda Python) you may need to disable Windows' virus and malware protection—otherwise the installation takes forever (at least in a VirtualBox VM). To do so, open the Windows Settings and then, under "Updates & Security > Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings" (temporarily) disable "Real-time protection" (but only ever do this in a separate VM, not on your main system).
 
-### Repository
+## Repository
 
 Download the whole repository to a local file, either via
 ```
 git clone https://github.com/AF-Cabouat/PREVis-scales.git
 ```
 or by downloading the corresponding zip archive and extracting it to a known location.
+
+## Python environment
 
 ### Preparation for Python prerequisites under Windows
 
@@ -35,14 +35,14 @@ pip install -r requirements.txt
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
-### R notebooks
+## R environement
 
-#### Software installation
+### Software installation
 R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the RStudio software available on https://posit.co/download/rstudio-desktop/. We will also need Rtools to compile arhived versions of some packages: download and install the Rtools43 installer from https://cran.rstudio.com/bin/windows/Rtools/rtools43/rtools.html.
 
 
-#### Automated installation of other packages
-When running the notebooks, RStudio will attempt to load the following libraries, and to install them if they are missing:
+### Automated installation of R packages
+When running the first notebook, RStudio will attempt to load the following libraries, and to install them if they are missing:
 - ```corrplot```
 - ```dplyr```
 - ```knitr```
@@ -55,20 +55,25 @@ When running the notebooks, RStudio will attempt to load the following libraries
 
 - ```misty``` **WARNING**: version 0.6.0 required >> if you already have a version of the misty package other than 0.6.0, the code in this notebook will replace your current version with the 0.6.0 version!
 
+First, open RStudio with the `Reproduce1-EFA.Rmd` notebook from the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned.
 
+To open a file in RStudio, you can use the "File" > "Open File (Ctrl + O)" command from the top menu in RStudio. Alternatively, you can go to the "Files" tab in the section on the bottom-right, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file.
+In both cases, the notebook will open at the top-left, taking up the main part of the RStudio window.
 
-
-## How to run notebooks
-
-First, open RStudio (but it should be open from the last preparation step). Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right.
-
-There you will also see a note about the missing R packages mentioned above: please do NOT choose to install these. Click on the x button on the right side of the message instead, and run the first chunk called "r libraries" by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R.
+There you will also see a note about the missing R packages mentioned above: please do NOT choose to install these. Click on the x button on the right side of the message instead, and run the first chunk called "r libraries" by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or place your cursor anywhere inside the chunk and press Ctrl + R.
 
 Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run All" (or Ctrl + Alt + R). Proceed with running the notebooks as described next.
 
 You can also choose to generate a file containing the code's complete outputs with the ```knit``` package. To that end, instead click on "Knit" in the local menu of the top-left notebook view and select HTML. All HTML files from our original research project are available on our OSF repository at [osf.io/9cg8j](https://osf.io/9cg8j).
 
+
+# How to run notebooks
+
 Run notebooks in order (1 to 3): the ```Data_Analysis/``` folder and output nested structure will be generated from the code.
+
+For each notebook:
+- first run the chunk called ```r oursetup``` alone by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R.
+- then, use the Run button at the top-right corner of the document window and choose "Run all" at the bottom (or press Ctrl + Alt + R).
 
 ### ```Reproduce1-EFA.Rmd```
 Exploratory Factor Analyses described in ***section 5.5*** and ***Appendices F*** to ***J*** in the paper. The equivalent notebook was uploaded on OSF as ```3-EFA-+-all.Rmd```
