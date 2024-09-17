@@ -4,6 +4,27 @@ output: html_document
 date: "2024-01-09"
 ---
 
+```{r libraries}
+
+load_and_install_libraries <- function(libraries) {
+  for (lib in libraries) {
+    if (!require(lib, character.only = TRUE)) {
+      install.packages(lib)
+      library(lib, character.only = TRUE)
+    }
+  }
+}
+
+required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "tibble","misty")
+load_and_install_libraries(required_libraries)
+
+if (!require("misty", character.only = TRUE)) {
+  packageurl <- "https://cran.r-project.org/src/contrib/Archive/misty/misty_0.6.0.tar.gz"
+  install.packages(packageurl, repos=NULL, type="source")
+} 
+
+```
+
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -39,20 +60,6 @@ knitr::opts_knit$set(root.dir = file.path("..", "Data_Analysis"))
 
 # Print the current working directory to verify
 print(getwd())
-```
-
-```{r libraries}
-load_and_install_libraries <- function(libraries) {
-  for (lib in libraries) {
-    if (!require(lib, character.only = TRUE)) {
-      install.packages(lib)
-      library(lib, character.only = TRUE)
-    }
-  }
-}
-
-required_libraries <- c("psych", "misty", "mice", "mifa", "corrplot", "knitr", "tibble")
-load_and_install_libraries(required_libraries)
 ```
 
 ```{r functions}
