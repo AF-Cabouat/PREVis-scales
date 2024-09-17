@@ -16,21 +16,6 @@ git clone https://github.com/AF-Cabouat/PREVis-scales.git
 ```
 or by downloading the corresponding zip archive and extracting it to a known location.
 
-### R notebooks
-
-R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
-When running the notebooks, Rstudio will attempt to load the following libraries, and to install them if they are missing:
-- ```corrplot```
-- ```dplyr```
-- ```knitr```
-- ```lavaan```
-- ```mice```
-- ```mifa```
-- ```misty```
-- ```psych```
-- ```RColorBrewer```
-- ```tibble```
-
 ### Preparation for Python prerequisites under Windows
 
 Under Windows, first install the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/), then run the command
@@ -50,9 +35,30 @@ pip install -r requirements.txt
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
+### R notebooks
+
+R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
+When running the notebooks, Rstudio will attempt to load the following libraries, and to install them if they are missing:
+- ```corrplot```
+- ```dplyr```
+- ```knitr```
+- ```lavaan```
+- ```mice```
+- ```mifa```
+- ```misty```
+- ```psych```
+- ```RColorBrewer```
+- ```tibble```
+
+Then we need to make sure that we have the correct version of the `misty` package. Start RStudio and, in the console on the left, run
+```
+remove.packages("misty")
+```
+Then download version [0.6.0 of the `misty` package](https://cran.r-project.org/src/contrib/Archive/misty/misty_0.6.0.tar.gz) to a local directory. Then, in R Studio, select Tools > Install packages ... from the top menu, select "Package Archive File (.zip; .tar.gz)" for "Install from:", and then click the browse button to open a dialog to select the downloaded package archive, then click the "Install" button.
+
 ## How to run notebooks
 
-First, open RStudio. Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right. There you will also see a note about the missing R packages mentioned above, simply click on "Install" to get them installed. 
+First, open RStudio (but it should be open from the last preparation step). Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right. There you will also see a note about the missing R packages mentioned above, simply click on "Install" to get them installed. 
 
 Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run All" (or Ctrl + Alt + R). Proceed with running the notebooks as described next.
 
