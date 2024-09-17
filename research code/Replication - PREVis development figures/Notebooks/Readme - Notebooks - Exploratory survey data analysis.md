@@ -60,7 +60,9 @@ When running the notebooks, RStudio will attempt to load the following libraries
 
 ## How to run notebooks
 
-First, open RStudio (but it should be open from the last preparation step). Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right. There you will also see a note about the missing R packages mentioned above, simply click on "Install" to get them installed. 
+First, open RStudio (but it should be open from the last preparation step). Then, in the section on the bottom-right, in the "Files" tab, click on the "..." to the right of the "Home" directory and navigate to the [research code/Replication - PREVis development figures/Notebooks](/research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks) directory in the copy of the repository you extracted or cloned. Double-click on the `Reproduce1-EFA.Rmd` file, which opens the file on the top-right.
+
+There you will also see a note about the missing R packages mentioned above: please do NOT choose to install these. Click on the x button on the right side of the message instead, and run the first chunk called "r libraries" by clicking on the "Play" (green triangle) button at the top right corner of this chunk, or put your cursor inside the chunk and hit Ctrl + R.
 
 Then you can proceed by running the notebook by clicking on "Run" in the local menu of the top-left notebook view and selecting "Run All" (or Ctrl + Alt + R). Proceed with running the notebooks as described next.
 
