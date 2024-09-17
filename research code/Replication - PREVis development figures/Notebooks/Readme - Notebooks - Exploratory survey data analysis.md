@@ -47,7 +47,6 @@ pip install -r requirements.txt
 ```
 (using the [`requirements.txt`](/requirements.txt) file in the root of the repository) or use the following commands:
 - ```Jupyterlab```: use the ```pip install jupyterlab``` command, or check https://jupyter.org/install
-- under Windows, you also need the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) to be able to install `pandas`
 - ```pandas``` *version 2.0*: use the ```pip install pandas==2.0.0``` command, or check https://pandas.pydata.org/docs/getting_started/install.html 
 - ```seaborn``` *version 0.13.1*: use the ```pip install seaborn==0.13.1``` command, or check https://seaborn.pydata.org/installing.html
 
