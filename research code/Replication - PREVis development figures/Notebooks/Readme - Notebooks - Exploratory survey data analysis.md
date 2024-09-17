@@ -37,8 +37,8 @@ pip install -r requirements.txt
 
 ### R notebooks
 
-R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the R Studio software available on https://posit.co/download/rstudio-desktop/. 
-When running the notebooks, Rstudio will attempt to load the following libraries, and to install them if they are missing:
+R Markdown files can be run with R version 4.3.2 (see CRAN archives: https://cran.rstudio.com/src/base/R-4/ or, specifically for for Windows, download and install the file `R-4.3.2-win.exe` from https://cran.rstudio.com/bin/windows/base/old/4.3.2) and the RStudio software available on https://posit.co/download/rstudio-desktop/. 
+When running the notebooks, RStudio will attempt to load the following libraries, and to install them if they are missing:
 - ```corrplot```
 - ```dplyr```
 - ```knitr```
