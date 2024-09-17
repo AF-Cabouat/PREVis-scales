@@ -1,42 +1,47 @@
 # Perceived Readability Evaluation for Visualizations (PREVis) scales
 
-This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis.
+This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis scales, as published in this paper:
 
-## Root files
-At the root of this folder are two PDF files:
+> Anne-Flore Cabouat, Tingying He, Petra Isenberg, and Tobias Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. IEEE Transactions on Visualization and Computer Graphics, 31, 2025. To appear. doi: 10.1109/TVCG.2024.3456318
 
-- ```PREVis_full_paper.pdf```: PREVis publication (main paper with appendices).
-- ```PREVis questionnaire companion.pdf```: A practical guide to PREVis with implementation recommendations and printable versions of the questionnaire.
+If you use any material from this repository please cite the paper. Here's a bibTeX entry:
+```
+@article{Cabouat:2025:PPR,
+   author      = {Anne-Flore Cabouat and Tingying He and Petra Isenberg and Tobias Isenberg},
+   title       = {{PREVis}: Perceived Readability Evaluation for Visualizations},
+   journal     = {IEEE Transactions on Visualization and Computer Graphics},
+   year        = {2025},
+   volume      = {31},
+   doi         = {10.1109/TVCG.2024.3456318},
+   osf_url     = {https://osf.io/9cg8j/},
+   github_url  = {https://github.com/AF-Cabouat/PREVis-scales/},
+   url         = {https://tobias.isenberg.cc/p/Cabouat2025PPR},
+   note        = {To appear},
+}
+```
 
 ## Folders organization
-The folders are organized following phases of the instrument development and validation:
-
-- ``` / Phase 1 - Item development```: material related to generation and validation of candidate items --- *see **section 4** in the paper.*
-- ```/ Phase 2 - Scale development```: exploratory survey content, collected data, analysis notebooks and output tables and figures ---  *see **section 5** in the paper.*
-- ```/ Phase 3 - Scale validation```: validation survey content, collected data, analysis notebooks and outputs tables and figures ---  *see **section 6** in the paper.*
-- ```/ Main paper figures```: figures from the main paper in PDF format.
-- ```/ Using PREVis - plotting results notebook and examples```: a folder containing example figures that researchers can plot to help analyze or present PREVis data. The folder also contains a Jupyter notebook named ```plotting_PREVis.ipynb``` and two example ```.csv``` datasets to plot all PDF figures in the folder.
-
-## Companion OSF repositories
-
-There are three OSF repositories for this project:
-
-- Original supplemental material on [osf.io/9cg8j](https://osf.io/9cg8j/)
-- Studies pre-registrations on [osf.io/q4sdm](https://osf.io/q4sdm/)
-- Additional documents in [osf.io/aewuq](https://osf.io/aewuq/): Full Research log and Methodology notes for cognitive interviews (pre-test in section 5 of the main paper). We separated these files because they contain embedded images that we cannot share under the CC BY licence.
-
+- [`research code`](research%20code/): this is the folder with all the code and data for reproducible steps of our research project.
+- [`using PREVis`](using%20PREVis): if you want to use PREVis scales in a study, this is where we put all the resources you need. The folder contains a detailed PDF companion guide with a FAQ section and example study protocols. It also contains a folder with example data and code for visual analysis and presentation of your study results.
 
 ## CC-BY licence
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
-To use it, please cite the following source:
-
-> A.-F. Cabouat, T. He, T. Isenberg, P. Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. _IEEE Transactions on Visualization and Computer Graphics_, 2024. (Accepted).
+To use it, please cite the paper mentioned above and attribute the materials to the authors of the paper.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+
+## Companion OSF repositories
+
+A companion OSF repository was provided at the time of submission on [osf.io/9cg8j](https://osf.io/9cg8j/) for the original research project.
+
+## Process to reproduce figures from the paper
+
+The process for reproducing Figures 14 to 27 and 29 to 71 from the Appendix relies on R and Jupyter Notebooks and is described in detail in a [dedicated readme file](research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks/Readme%20-%20Notebooks%20-%20Exploratory%20survey%20data%20analysis.md), please see it and follow the instructions there.

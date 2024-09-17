@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <script src="js/lib/d3.js" type="text/javascript"></script>
+  <script src="js/data-filtering.js" type="text/javascript"></script>
+  <script src="js/lib/greadability.js" type="text/javascript"></script>
+  <script src="js/lib/d3-force.js" type="text/javascript"></script>
+  <!-- <script src="js/lib/d3-legend.js" type="text/javascript"></script> -->
+  <script src="js/force-simple.js" type="text/javascript"></script>
+<style>
+</style>
+</head>
+
+<body>
+  <div id="container">
+  </div>
+
+  <script>
+
+    d3.json("dataset/miserables_new_names.json").then(function (data) {
+
+      // a non-legible option (network 3)
+      const groups_to_keep = [] //[1, 4, 6];
+      const centrality_limit = 0;
+      const top_n = 24;
+      const this_ManyBodyStrength = -40
+      const this_forceLinkDistance = 120
+      
+      // SAVE OF GREADABILITY METRICS OUTPUT AFTER ARRANGING NODES
+    //   {
+    // "crossing": 0.6429404900816803,
+    // "crossingAngle": 0.783753216534197,
+    // "angularResolutionMin": 0.5751765877616952,
+    // "angularResolutionDev": 0.7131666004653258
+    // }
+
+      const filteredData = filterNodes(data, groups_to_keep, centrality_limit, top_n);
+
+    //Create chart
+      SimpleNodeLink(filteredData, {
+        // nodeId: d => d.id,
+        // nodeGroup: d => d.group,
+        // nodeTitle: d => `${d.id}\n${d.group}`,
+        // linkStrokeWidth: l => Math.sqrt(l.value),
+        // width,
+        // height: 600
+        width: 800,
+        height: 500,
+        title: "The title of this graph",
+        center_x:300,
+        ManyBodyStrength : this_ManyBodyStrength,
+        forceLinkDistance : this_forceLinkDistance,
+      })
+
+
+  })
+
+  </script>
+</body>
+
+</html>
