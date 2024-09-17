@@ -5,7 +5,7 @@ date: "2024-01-22"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r oursetup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
 # Get the current R Markdown notebook file path and the grandparent folder
@@ -56,8 +56,17 @@ load_and_install_libraries <- function(libraries) {
   }
 }
 
-required_libraries <- c("psych", "misty", "mice", "mifa", "corrplot", "knitr", "lavaan", "dplyr", "RColorBrewer")
+required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "lavaan", "dplyr", "tibble", "RColorBrewer")
 load_and_install_libraries(required_libraries)
+
+if (!require("misty", character.only = TRUE)) {
+  stop("misty package is not installed. Open the first notebook ('Reproduce1') in this directory and run the first chunk called 'r libraries' to install it.")
+} else (
+  library("misty", character.only = TRUE)
+  if (packageVersion("misty") != "0.6.0") {
+    stop("misty package version is not 0.6.0. Open the first notebook ('Reproduce1') in this directory and run the first chunk called 'r libraries' TWICE to uninstall the current version and replace it with the correct version.")
+  }
+)
 ```
 ## Functions
 ```{r functions}
