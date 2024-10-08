@@ -11,49 +11,21 @@ load_and_install_libraries <- function(libraries) {
   for (lib in libraries) {
     if (!require(lib, character.only = TRUE)) {
       install.packages(lib)
-      library(lib, character.only = TRUE)
     }
+    library(lib, character.only = TRUE)
   }
 }
 
-required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "tibble")
+required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "tibble", "misty", "mvnmle")
+#NB: mvnmle is required for na.test in misty v 0.6.6 and above
+#original code relied on misty v 0.6.0 which didn't require this package because it only performed Little's MCAR on missing values.
+
 load_and_install_libraries(required_libraries)
 
-
-# Taking care of misty
-if (!require("misty", character.only = TRUE)) {
-  
-  warning("misty package not installed. Installing version 0.6.0 now and its dependency 'norm'.")
-  warning("This process requires RTools installed on your system.")
-  
-  install.packages(c("norm",  "ggplot2", "lavaan", "readxl", "rstudioapi", "writexl"))
-  packageurl <- "https://cran.r-project.org/src/contrib/Archive/misty/misty_0.6.0.tar.gz"
-  install.packages(packageurl, repos=NULL, type="source")
-  
-  library("misty", character.only = TRUE)
-  cat("######################################################################################")
-  cat("misty package version 0.6.0 installed and loaded. You can proceed with the next chunk.")
-  cat("######################################################################################")
-  
-} else {
-  library("misty")
-  if (packageVersion("misty") != "0.6.0") {
-    
-    warning("Required misty version: 0.6.0. Found a different version installed:")
-    print(packageVersion("misty"))
-    
-    cat("Uninstalling misty...")
-    remove.packages("misty")
-    cat("misty was successfully uninstalled.")
-    
-    warning("\n#####################RESTARTING R TO PREPARE CLEAN INSTALLATION OF CORRECT PACKAGE VERSION. PLEASE RUN THIS CODE AGAIN.######################\n")
-    .rs.restartR()
-  } else {
-    if (packageVersion("misty") == "0.6.0") {
-      cat("###########################################################################\n")
-      cat("misty package version 0.6.0 installed. You can proceed with the next chunk.\n")
-      cat("###########################################################################\n")
-    }
+misty_version <- packageVersion("misty")
+if (misty_version != "0.6.6") {
+  if (as.numeric(gsub("\\.", "", misty_version)) < 66) {
+        stop("The misty package version needs to be at least 0.6.6.")
   }
 }
 
@@ -206,8 +178,8 @@ analyze_stimuli <-function(num){
   cat("\n")
   cat("### Little's test for MCAR\n")
   #test MCAR
-  MCAR <- na.test(data)
-  mcar_p <- MCAR[["result"]][["pval"]]
+  MCAR <- na.test(data, print="little")
+  mcar_p <- MCAR[["result"]][["little"]][["pval"]]
   cat(paste("Little's test p-value is:", mcar_p,"\n\n"))
 
   
