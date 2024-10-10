@@ -1,6 +1,6 @@
 # Perceived Readability Evaluation for Visualizations (PREVis) scales
 
-This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis scales, as published in this paper:
+This repository contains the code and data related to the development, validation, and implementation of PREVis scales, as published in this paper:
 
 > Anne-Flore Cabouat, Tingying He, Petra Isenberg, and Tobias Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. IEEE Transactions on Visualization and Computer Graphics, 31, 2025. To appear. doi: 10.1109/TVCG.2024.3456318
 
