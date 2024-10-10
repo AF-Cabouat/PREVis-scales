@@ -1,7 +1,0 @@
-Moral rights:
- Anne-Flore Cabouat
- Tingying He
- Petra Isenberg
- Tobias Isenberg
-
-The version control system provides attribution for specific lines of code.

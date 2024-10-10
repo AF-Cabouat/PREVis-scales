@@ -47,10 +47,28 @@ print(getwd())
 
 ```{r librairies}
 
-required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "lavaan", "dplyr", "tibble", "RColorBrewer", "misty", "mvnmle")
-for (lib in required_libraries) {
-    library(lib, character.only = TRUE)
+load_and_install_libraries <- function(libraries) {
+  for (lib in libraries) {
+    if (!require(lib, character.only = TRUE)) {
+      install.packages(lib)
+      library(lib, character.only = TRUE)
+    }
+  }
 }
+
+required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "lavaan", "dplyr", "tibble", "RColorBrewer")
+load_and_install_libraries(required_libraries)
+
+if (!require("misty", character.only = TRUE)) {
+  stop("misty package is not installed. Open the first notebook ('Reproduce1') in this directory and run the first chunk called 'r libraries' to install it.")
+} else {
+  library("misty", character.only = TRUE)
+  if (packageVersion("misty") != "0.6.0") {
+    stop("misty package version is not 0.6.0. Open the first notebook ('Reproduce1') in this directory and run the first chunk called 'r libraries' TWICE to uninstall the current version and replace it with the correct version.")
+  }
+}
+
+
 ```
 
 ## Functions
@@ -147,8 +165,8 @@ stimulus_data_test <- function(the_data, the_letter){
 
   cat("#### Little's test for MCAR\n")
   #test MCAR
-  MCAR <- na.test(data, print="little")
-  mcar_p <- MCAR[["result"]][["little"]][["pval"]]
+  MCAR <- na.test(the_data)
+  mcar_p <- MCAR[["result"]][["pval"]]
   
   cat("\n#### Amount of missing data\n")
   nb_obs <- nrow(the_data)*ncol(the_data)
