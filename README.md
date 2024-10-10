@@ -1,6 +1,6 @@
 # Perceived Readability Evaluation for Visualizations (PREVis) scales
 
-This repository contains the code and data related to the development, validation, and implementation of PREVis scales, as published in this paper:
+This repository contains all the supplementary materials related to the development, validation, and implementation of PREVis scales, as published in this paper:
 
 > Anne-Flore Cabouat, Tingying He, Petra Isenberg, and Tobias Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. IEEE Transactions on Visualization and Computer Graphics, 31, 2025. To appear. doi: 10.1109/TVCG.2024.3456318
 
@@ -43,5 +43,7 @@ To use it, please cite the paper mentioned above and attribute the materials to 
 A companion OSF repository was provided at the time of submission on [osf.io/9cg8j](https://osf.io/9cg8j/) for the original research project.
 
 ## Process to reproduce figures from the paper
+
+The process for reproducing Figures 4 and 5 from the main paper and Figures 78 to 99 from the Appendix relies on R and Jupyter Notebooks and is described in detail in a [dedicated readme file](research%20code/Replication%20-%20PREVis%20validation%20figures/Notebooks/Readme%20-%20Notebooks%20-%20Validation%20survey%20data%20analysis.md), please see it and follow the instructions there.
 
 The process for reproducing Figures 14 to 27 and 29 to 71 from the Appendix relies on R and Jupyter Notebooks and is described in detail in a [dedicated readme file](research%20code/Replication%20-%20PREVis%20development%20figures/Notebooks/Readme%20-%20Notebooks%20-%20Exploratory%20survey%20data%20analysis.md), please see it and follow the instructions there.
