@@ -5,25 +5,82 @@ date: "2024-03-07 - edit 2024-06-30"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r oursetup, include=TRUE}
+
+# Now to setting up the working directory
+
 knitr::opts_chunk$set(echo = TRUE)
 
-#set wordking directory
-my_dir <- "C:/Users/Anne-Flore/git/PREVis-scales/research code/3 - Instrument validation/"
-# my_dir <- "your_data_directory" #eg: "absolute_path_to/Supplementary-material-folder/3 - Scale validation/"
-knitr::opts_knit$set(root.dir = paste(my_dir, "Results/Data_Analysis", sep=""))
+# Get the current R Markdown notebook file path and the grandparent folder
+get_current_rmd_path <- function() {
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    # When running interactively in RStudio
+    return(rstudioapi::getActiveDocumentContext()$path)
+  } else if (requireNamespace("knitr", quietly = TRUE)) {
+    # When knitting the document
+    return(knitr::current_input(dir = TRUE)) 
+  } else {
+    stop("Cannot determine the current R Markdown file path.")
+  }
+}
+
+current_rmd_path <- get_current_rmd_path()
+my_dir <- dirname(dirname(current_rmd_path))
+
+
+#### OPTIONAL: manual setting of directory
+#my_dir <- "your_data_directory" #eg: "C:/Absolute_path_to_git/PREVis-scales/research code/Replication - PREVis development figures"
+
+# We create the output folders if they don't exist
+if (!dir.exists(file.path(my_dir, "Data_Analysis"))) {
+  dir.create(file.path(my_dir, "Data_Analysis"), recursive = TRUE)
+}
+
+# We set our working directory to the Data_Analysis folder so that all outputs are saved there
+my_wd <- file.path(my_dir, "Data_Analysis")
+setwd(my_wd)
+knitr::opts_knit$set(root.dir = file.path("..", "Data_Analysis"))
+
+# Print the current working directory to verify
+print(getwd())
+```
+
+```{r libraries}
+
+# Libraries
+load_and_install_libraries <- function(libraries) {
+  for (lib in libraries) {
+    if (!require(lib, character.only = TRUE)) {
+      install.packages(lib)
+    }
+    library(lib, character.only = TRUE)
+  }
+}
+
+required_libraries <- c("psych", "corrplot", "rmcorr", "dplyr", "corrplot")
+#NB: mvnmle is required for na.test in misty v 0.6.6 and above
+#original code relied on misty v 0.6.0 which didn't require this package because it only performed Little's MCAR on missing values.
+
+load_and_install_libraries(required_libraries)
+
+misty_version <- packageVersion("misty")
+if (misty_version != "0.6.6") {
+  if (as.numeric(gsub("\\.", "", misty_version)) < 66) {
+        stop("The misty package version needs to be at least 0.6.6.")
+  }
+}
 
 ```
 
 ## Librairies
 
-```{r librairies}
-library(psych)
-library(rmcorr)
-library(dplyr)
-library(corrplot) #plot correlation matrix
-library(RColorBrewer) #for correlation matrix
-```
+# ```{r librairies}
+# library(psych)
+# library(rmcorr)
+# library(dplyr)
+# library(corrplot) #plot correlation matrix
+# library(RColorBrewer) #for correlation matrix
+# ```
 ## Functions
 ```{r functions}
 
@@ -131,8 +188,12 @@ corrM_to_file <- function (d, name, filename, variables, font_size = 1, type = "
 ## Load data
 
 ```{r load data}
+setwd(my_wd)
+data_dir <- file.path(my_dir, "Data")
+data_file <- file.path(data_dir, "full_answers_by_stimuli.csv")
+
 stimuli_letters <- list("A","B","C")
-full_data <- read.csv(paste("full_answers_by_stimuli.csv"), encoding="UTF-8")
+full_data <- read.csv(data_file, encoding="UTF-8")
 
 # and make directories if needed
 
@@ -145,6 +206,7 @@ if (!dir.exists("MTMM_analysis/")) {
 
 # MTMM matrix at the item level
 ```{r MTMM matrix at the item level}
+setwd(my_wd)
 
 All_traits <- list(
   understand = c("obvious","represent","understandEasi"),
@@ -164,16 +226,13 @@ measurements_rm <- full_data[, columns_to_keep]
 corrM_to_file(measurements_im, "- Individual items", file, variables, type = "im")
 corrM_to_file(measurements_rm, "- Individual items", file, variables, type = "rm")
 
-#corrM <- make_corrM(measurements, variables)
-#corrM_matrix <- corrM$matrix
-#corrM_df <- as.data.frame(corrM_matrix)
-
 
 ```
 
 # MTMM matrix at the scale level
 
 ```{r MTMM matrix at the scale level}
+setwd(my_wd)
 
 Averages_traits <- list(
   understand = c("Understand_average"),

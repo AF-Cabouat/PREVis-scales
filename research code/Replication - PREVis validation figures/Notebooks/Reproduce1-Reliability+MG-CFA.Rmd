@@ -5,28 +5,74 @@ date: "2024-03-12"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r oursetup, include=TRUE}
+
+# Now to setting up the working directory
+
 knitr::opts_chunk$set(echo = TRUE)
 
-#set working directory
-# my_dir <- "your_data_directory" #eg: "absolute_path_to/Supplementary-material-folder/3 - Scale validation/"
-knitr::opts_knit$set(root.dir = paste(my_dir, "Results/Data_Analysis", sep=""))
+# Get the current R Markdown notebook file path and the grandparent folder
+get_current_rmd_path <- function() {
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    # When running interactively in RStudio
+    return(rstudioapi::getActiveDocumentContext()$path)
+  } else if (requireNamespace("knitr", quietly = TRUE)) {
+    # When knitting the document
+    return(knitr::current_input(dir = TRUE)) 
+  } else {
+    stop("Cannot determine the current R Markdown file path.")
+  }
+}
+
+current_rmd_path <- get_current_rmd_path()
+my_dir <- dirname(dirname(current_rmd_path))
+
+
+#### OPTIONAL: manual setting of directory
+#my_dir <- "your_data_directory" #eg: "C:/Absolute_path_to_git/PREVis-scales/research code/Replication - PREVis development figures"
+
+# We create the output folders if they don't exist
+if (!dir.exists(file.path(my_dir, "Data_Analysis"))) {
+  dir.create(file.path(my_dir, "Data_Analysis"), recursive = TRUE)
+}
+
+# We set our working directory to the Data_Analysis folder so that all outputs are saved there
+my_wd <- file.path(my_dir, "Data_Analysis")
+setwd(my_wd)
+knitr::opts_knit$set(root.dir = file.path("..", "Data_Analysis"))
+
+# Print the current working directory to verify
+print(getwd())
 ```
 
-## Librairies
+```{r libraries}
 
-```{r librairies}
-library(dplyr)
-library(knitr) #RStudio
-library(png) #output png
-library(corrplot) #plot correlation matrix
-library(misty) #Little's test for MCAR
-library(mice)
-library(mifa) # MICE for missing data handling
-library(lavaan) # for cfa
-library(psych) # for EFA
-library(RColorBrewer) #for corr matrix
+# Libraries
+load_and_install_libraries <- function(libraries) {
+  for (lib in libraries) {
+    if (!require(lib, character.only = TRUE)) {
+      install.packages(lib)
+    }
+    library(lib, character.only = TRUE)
+  }
+}
+
+required_libraries <- c("psych", "mice", "mifa", "corrplot", "knitr", "misty", "mvnmle", "lavaan", "dplyr")
+#NB: mvnmle is required for na.test in misty v 0.6.6 and above
+#original code relied on misty v 0.6.0 which didn't require this package because it only performed Little's MCAR on missing values.
+
+load_and_install_libraries(required_libraries)
+
+misty_version <- packageVersion("misty")
+if (misty_version != "0.6.6") {
+  if (as.numeric(gsub("\\.", "", misty_version)) < 66) {
+        stop("The misty package version needs to be at least 0.6.6.")
+  }
+}
+
 ```
+
+
 ## Functions
 ```{r functions}
 
@@ -126,7 +172,7 @@ stimulus_data_test <- function(the_data, the_letter){
   cat("#### Little's test for MCAR\n")
   #test MCAR
   MCAR <- na.test(the_data)
-  mcar_p <- MCAR[["result"]][["pval"]]
+  mcar_p <- MCAR[["result"]][["little"]][["pval"]]
   
   cat("\n#### Amount of missing data\n")
   nb_obs <- nrow(the_data)*ncol(the_data)
@@ -174,22 +220,6 @@ fitMeasures_output <- function(modelFit, model_name) {
   
   cat("\nDETAILS\n=================\n")
   print(fit_Indices)
-  
-  # cat("\n RMSEA - \n")
-  # this_RMSEAIndices <- fit_Indices[c("rmsea","rmsea.pvalue","rmsea.ci.lower","rmsea.ci.upper","rmsea.ci.level")]
-  # print(this_RMSEAIndices)
-  # 
-  # cat("\n SRMR \n")
-  # this_SRMRIndices <- fit_Indices[c("srmr")]
-  # print(this_SRMRIndices)
-  # 
-  # cat("\n Comparative Fit Index \n")
-  # this_CFIIndices <- fit_Indices[c("cfi")]
-  # print(this_CFIIndices)
-  # 
-  # cat("\n Chi-square \n")
-  # this_ChiSquareIndices <- fit_Indices[c("chisq","df","pvalue")]
-  # print(this_ChiSquareIndices)
 
 }
 
@@ -229,8 +259,13 @@ factor_to_string <- function(factor_name, factor_list) {
 ## Load data
 
 ```{r load data}
+
+setwd(my_wd)
+data_dir <- file.path(my_dir, "Data")
+data_file <- file.path(data_dir, "multigroup_ratings.csv")
+
 stimuli_letters <- list("A","B","C")
-grp_data <- read.csv(paste("multigroup_ratings.csv"), encoding="UTF-8")
+grp_data <- read.csv(data_file, encoding="UTF-8")
 data <- subset(grp_data, select = -c(stimulus))
 
 # and make directories if needed
@@ -247,6 +282,7 @@ if (!dir.exists("generatedPlots-CFA/")) {
 
 ## Descriptive statistics - Check minimum/maximum values per item, and screen for missing values
 ```{r data overview}
+setwd(my_wd)
 
 cat("\n\n==========================================\n
     ==========================================\n
@@ -267,6 +303,7 @@ print(nb_obs)
 
 # Reliability
 ```{r reliability of each sub-scale (each factor)}
+setwd(my_wd)
 
 cat("\n\n==========================================\n")
 cat("==========================================\n")
@@ -401,6 +438,7 @@ write.csv(reliability_df_full,file=paste("generatedData-CFA/reliability-subscale
 ```
 
 ```{r run CFA analysis}
+setwd(my_wd)
 
 cat("\n\n==========================================")
 cat("\n==========================================\n")
@@ -461,7 +499,7 @@ A value less than . 08 is generally considered a good fit (Hu & Bentler, 1999)
 #### RMSEA (Root Mean Square Error of Approximation)
 > rmsea, rmsea.pvalue, rmsea.ci.lowe,r rmsea.ci.upper, rmsea.ci.level
 
-RMSEA is a measure of how well the model's implied relationships between variables match the observed relationships in the data. It measures the average magnitude of the differences between predicted and observed values. In the context of CFA, it looks at how well the model-predicted covariances or correlations match the actual observed covariances or correlations among the variables.
+RMSEA is a measure of how well the models implied relationships between variables match the observed relationships in the data. It measures the average magnitude of the differences between predicted and observed values. In the context of CFA, it looks at how well the model-predicted covariances or correlations match the actual observed covariances or correlations among the variables.
 
 RMSEA values less than 0.05 are good, values between 0.05 and 0.08 are acceptable, values between 0.08 and 0.1 are marginal, and values greater than 0.1 are poor. https://psycnet.apa.org/doi/10.1037/1082-989X.4.3.272
 Hu and Bentler (1999) however recommend CFI or TLI + SRMR as validation criterion.
@@ -498,6 +536,9 @@ fit3 = model with constraint on both loadings and intercepts
 
 
 ```{r measurement invariance}
+setwd(my_wd)
+
+
 cat("\n====================\n")
 cat("\n Measurement invariance\n")
 cat("\n====================\n")
@@ -520,6 +561,7 @@ lavTestLRT(fit1, fit2, fit3)
 
 #We already ran checks on overall data. Now we also check individual subgroups
 ```{r individual group data normality and EFA appropriateness checks}
+setwd(my_wd)
 
 row_names <- c("alpha","omega.tot (1 factor)", "omega.tot (4 factors)")
 reliab_df <- data.frame(row.names = row_names)
@@ -572,30 +614,5 @@ for (letter in stimuli_letters){
 }
 
 write.csv(reliab_df,file=(paste("generatedData-CFA/reliability-global-by-stimuli.csv", sep="")))
-
-```
-
-
-```{r omega sem, eval=FALSE}
-# build a model for a latent trait and 4 factors
-
-# Create a string for the overall readability factor
-overall_readability <- paste(unlist(Readability_factors), collapse = " + ")
-
-# Create strings for each individual factor
-factor_strings <- lapply(names(Readability_factors), function(factor_name) {
-  paste(factor_name, " =~ ", paste(unlist(Readability_factors[[factor_name]]), collapse = " + "))
-})
-
-# Combine overall and individual factor strings
-global_model_string <- c("readability =~ ", overall_readability, factor_strings)
-global_model_string <- paste(global_model_string, collapse = "\n")
-print(global_model_string)
-
-global_fit <- cfa(global_model_string, data = grp_data, missing = "fiml", group = "stimulus")
-
-omegaFromSem(global_fit,m=corrFiml,flip=TRUE,plot=TRUE)
-# library(sem) # for omega
-# omegaFromSem(global_fit,plot=TRUE)
 
 ```
