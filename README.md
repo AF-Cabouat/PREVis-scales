@@ -15,8 +15,7 @@ If you use any material from this repository please cite the paper. Here's a bib
    doi         = {10.1109/TVCG.2024.3456318},
    osf_url     = {https://osf.io/9cg8j/},
    github_url  = {https://github.com/AF-Cabouat/PREVis-scales/},
-   url         = {https://tobias.isenberg.cc/p/Cabouat2025PPR},
-   note        = {To appear},
+   url         = {https://doi.org/10.1109/TVCG.2024.3456318},
 }
 ```
 
