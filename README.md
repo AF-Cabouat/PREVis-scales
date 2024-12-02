@@ -4,6 +4,8 @@ This repository contains all the supplementary materials related to the developm
 
 > Anne-Flore Cabouat, Tingying He, Petra Isenberg, and Tobias Isenberg. PREVis: Perceived Readability Evaluation for Visualizations. IEEE Transactions on Visualization and Computer Graphics, 31, 2025. To appear. doi: 10.1109/TVCG.2024.3456318
 
+To learn more about PREVis and how to use it, check out our website [aviz.fr/PREViz](https://aviz.fr/PREVis/)
+
 If you use any material from this repository please cite the paper. Here's a bibTeX entry:
 ```
 @article{Cabouat:2025:PPR,
